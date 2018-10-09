@@ -1,0 +1,205 @@
+/*登录表单同一高度  公共样式*/
+.logIn-height{
+	height: 50px !important;
+}
+.logIn-hover{
+	border:none !important;
+}
+.logIn-hover:hover{
+	background: #e55a5b !important;
+	color:#ffffff !important;
+	opacity: 0.9 !important;
+}
+.logIn-height:focus{
+	border-color: #10A6EA;
+	-webkit-box-shadow:0px 0px 0 #10A6EA;
+	box-shadow:0px 0px 0 #10A6EA;
+}
+.logIn-a{
+	color: #797979;
+}
+/*登录布局*/
+.logIn-container{
+	background-color:#DADADA;
+}
+/*登录信息提醒*/
+.tixingTrue,.tixingFalse{
+	position: absolute;
+	right: -250px; /* 48px*/
+	height: 83px;
+	width: 248px;
+	text-align: center;
+	border-radius: 5px;
+}
+.tixing > div{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	line-height: 81px;
+}
+	.tixingFalse{
+		bottom: 140px;
+		background: #F2DEDE;
+		border:1px solid #EBCDD2;
+	}
+		
+	.tixingTrue{
+		bottom: 35px;
+		background: #DFF0D8;
+		border:1px solid #D6E9C6;
+	}
+		.tixingTrue i{
+			background: #DFF0D8;
+			color: #3C763D;
+			font-size: 32px;
+		}
+		.tixingFalse i{
+			background: #F2DEDE;
+			color: #A94442;
+			font-size: 32px;
+		}
+		.tixingTrue span,.tixingFalse span{
+			font-size: 16px;
+			font-weight: 600;
+			display: inline-block;
+			height: 32px;
+			-webkit-transform: translateY(-6px);
+			-moz-transform: translateY(-6px);
+			-ms-transform: translateY(-6px);
+			-o-transform: translateY(-6px);
+		}
+		.tixingTrue span{
+			color: #3C763D; 
+		}
+		.tixingFalse span{
+			color: #A94442;
+		}
+	
+/*中间登录内容部分*/
+	.logIn-container .logIn-center{
+		width: 100%;
+		height: 340px;
+		background-color:#E65F60;
+		position: absolute;
+		top:50%;
+		margin-top: -170px;
+	}
+		.logIn-center .logIn-bottomTitle{
+			position: absolute;
+			bottom: -65px;
+			text-align: center;
+			width: 100%;
+			color:#999999;
+		}
+		.logIn-center .logIn-bottomTitle a{
+			color:#999999;
+		}
+		.logIn-center .logIn-border{
+			padding: 11px 13px;
+			position: absolute;
+			top: 48px;
+			left: 50%;
+			height: 311px;
+			width: 826px;
+			margin-left: -413px;
+			background:url('../../images/logIn0.jpg') no-repeat center;
+			overflow: hidden;
+		}
+		.logIn-border .logIn-content{
+			width: 100%;
+			height: 100%;
+			padding-top: 55px;
+			overflow: hidden;
+		}
+		.logIn-content .logIn-content-left{
+			width: 354px;
+			height: 188px;
+			background: url('../../images/LoGo3.png') no-repeat center;
+			float: left;
+		}
+		.logIn-content .logIn-content-left1{
+			width: 354px;
+			height: 188px;
+			background: url('../../images/LoGo2.png') no-repeat center;
+			float: left;
+		}
+		.logIn-content .logIn-content-right{
+			float: left;
+			width: 446px;
+		}
+			.logIn-content-right .logIn-clude{
+				width: 100%;
+			}
+			/*二级模板加载样式  公共样式*/
+			.logIn-content-right .logIn-Code{
+				width: 100px;
+				margin-right:12px;
+				display: inline-block;
+				position: relative;
+				outline: none;
+			}
+			.logIn-content-right .logIn-Code:focus{
+				outline: none !important;
+			}
+			.logIn-content-right .logIn-btn{
+				width: 55px;
+				background: #E55A5B;
+				color: #ffffff;
+			}
+			/*成功跳转、修改密码成功模板样式*/
+			.logIn-content-right .logIn-success{
+				margin:30px auto 0 auto;
+				width: 94px;
+				height: 95px;
+			}
+			.logIn-content-right .longIn-success-url{
+				background: url('../../images/logInSuccess.jpg') no-repeat center;
+			}
+			.logIn-content-right .longIn-resetSuccess-url{
+				background: url('../../images/resetSuccess.jpg') no-repeat center;
+			}
+			.logIn-content-right .logIn-welcome{
+				text-align: center;
+				padding-top: 18px;
+			}
+				.logIn-welcome > span{
+					color:#666666;
+				}
+			/*找回密码样式*/
+			.logIn-content-right .logIn-content-title{
+				font-size: 17px;
+				font-weight: 600;
+				color: #333333;
+				height: 50px;
+				line-height: 50px;
+				margin-bottom: 15px;
+			}
+			/*输入验证码样式*/
+			.enterPsw-inputCode,.resetPsw-inputCode{
+				width: 216px !important;
+			}
+			
+
+/*表单验证样式 错误样式红色*/
+.error{
+	outline: none !important;
+    border-color: #E76162 !important;  
+    box-shadow: 0 0 5px #E76162 !important;  
+    border-radius: 5px;  
+}
+
+/*code验证码图片*/
+.codeImg{
+	width: 98px;
+	height: 48px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+}
+.deleteBox .deleteTit i:before{
+	 vertical-align: top;
+ }
+.deleteBox .deleBox .deleteTit span{
+	vertical-align: middle !important
+}

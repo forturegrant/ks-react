@@ -1,0 +1,380 @@
+/*顶部导航栏-背景颜色 */
+@nav-color: #E55A5B;
+/* 顶部导航栏-下边框颜色 */
+@nav-bot-border: #B72A24;
+/* 顶部导航栏-高亮颜色--鼠标触摸颜色*/
+@nav-actives: #AF393A;
+/* 顶部导航栏-字体颜色 左 中 右*/
+@nav-font-color: #FFF;
+
+/* 左侧导航栏-背景颜色*/
+@left-nav-backcolor: #414141;
+/* 左侧导航栏-字体颜色*/
+@left-nav-fontcolor: #FFF;
+/* 左侧导航栏-每一项-上边框颜色*/
+@left-nav-topborder: #4C4C4C;
+/* 左侧导航栏-每一项-下边框颜色*/
+@left-nav-bottom: #343434;
+
+/* 左侧导航栏-触摸时的颜色*/
+@left-nav-hover: #343434;
+/* 左侧导航栏-高亮颜色*/
+@left-nav-light: #343434;
+/* 左侧导航栏-小圆点颜色*/
+@left-nav-redCir: #e55a5b;
+
+/*内容区-搜索按钮颜色 */
+@content-search-btn: #E55A5B;
+/*内容区-搜索图标颜色 */
+@content-search-icon: #FFF;
+
+/*内容区-右下角消息提示球背景颜色 */
+@cont-ball-backcolor: #E55A5B;
+/*内容区-右下角消息提示球图标颜色 */
+@cont-ball-iconcolor: #FFF;
+/*内容区-右下角消息提示展开-顶部标题栏背景颜色 */
+@cont-hint-backcolor: #e55a5b;
+/*内容区-右下角消息提示展开-顶部标题栏字体颜色 */
+@cont-hint-fontcolor: #FFF;
+/*内容区-右下角消息提示展开-底部边框颜色 */
+@cont-hint-bottom: #dddddd;
+/*内容区-右下角消息提示展开-每条信息左边图标背景色 */
+@cont-hintnews-iconback: #f7b733;
+/*内容区-右下角消息提示展开-每条信息左边图标颜色 */
+@cont-hintnews-iconcolor: #FFF;
+/*内容区-您的位置背景和字体颜色 */
+@cont-position-backcolor: #F5F5F5;
+@cont-position-color: #666666;
+/*内容区-每一项页面跳转按钮背景颜色和字体颜色 */
+@cont-jump-backcolor: #F5F5F5;
+@cont-jump-color: #666666;
+@cont-jump-hover: #29335C;
+@cont-jump-hovercolor: #FFF;
+
+/*内容区-非选择操作-颜色 */
+@not-tabHint-border: #DDD;
+@not-tabHint-backcolor: #FFF;
+@not-tabHint-color: #999;
+/*内容区-选择操作-颜色 */
+@tabHint-backcolor: #29335c;
+/*内容区- 操作记录按钮颜色 */
+@table-btncolor: #E55A5B;
+/*内容区- 列表内合同编号高亮的颜色 */
+@pact-item-backcolor: #f7b733;
+@pact-item-color: #FFF;
+
+/*内容区- 分页边框和字体颜色 */
+@paging-color: #999999;
+@paging-border-color: #DDDDDD;
+/*内容区- 分页鼠标触摸一页时，边框和字体颜色 */
+@paging-hover-color: #FF0C0C;
+// @paging-hover-bordcolor: #FF0C0C;
+
+/* =================顶部导航样式================== */
+/*首页导航*/
+.nav-bg{
+  background: @nav-color;
+  height: 66px;
+  border-bottom: 2px solid @nav-bot-border;
+  display: none;
+  position: absolute;
+  top:-66px;
+  left:0;
+  right:0;
+}
+/*导航高亮*/
+.actives{
+  background-color: @nav-actives;
+}
+
+.nav-center #nav-parent li:hover{
+  /*cursor: hand;*/
+  background: @nav-actives;
+}
+/*导航左边title样式*/
+.nav-left{
+  width: 330px;
+  padding: 16px 0 16px 20px;
+}
+.nav-left-icon{
+  width: 39px;
+  height: 34px;
+  background:url('../images/nav0.png') no-repeat center;
+}
+.nav-left-title{
+  font-size: 24px;
+  padding: 0px 15px 0 15px;
+  color: @nav-font-color;
+}
+.nav-left-bor{
+  width: 1px;
+  height: 20px;
+  background: url('../images/nav1.jpg') no-repeat center;
+  margin: 7px 0 0 0;
+}
+/* 顶部导航栏字体颜色 左 */
+.nav-left-name{
+  color: @nav-font-color;
+  padding: 7px 0 0 15px;
+}
+/* 顶部导航栏字体颜色 中 */
+.nav-center #nav-parent li a{
+  text-decoration: none;
+  color: @nav-font-color;
+  height: 66px;
+  display: block;
+  padding: 0 22px;
+  font-size: 16px;
+}
+/* 导航栏右-字体颜色 */
+.D-a{
+  color: @nav-font-color!important;
+}
+.D-a:hover{
+  color: @nav-font-color;
+}
+.nav-right>ul>li{
+  float: left;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0px 8px 0 0;
+  font-size: 14px;
+  color: @nav-font-color;
+  height: 66px;
+  line-height: 66px;
+}
+/* =================顶部导航样式-end================== */
+
+/* =================左侧菜单样式================== */
+/* 左侧导航栏背景色 */
+.temleft{
+  float: left;
+  height: 100%;
+  width: 10%;
+  overflow: auto;
+  background-color: @left-nav-backcolor;
+  /*background: red;*/
+}
+/* 左侧导航栏字体颜色 */
+.temList > li{
+  text-align: center;
+  color: @left-nav-fontcolor;
+  text-decoration: none;
+  display: inherit;
+  height: 56px;
+  line-height: 56px;
+  border-bottom: 1px solid @left-nav-topborder;
+  border-top: 1px solid @left-nav-bottom;
+}
+/*左侧导航栏 触摸时的颜色*/
+.temList li:hover{
+  background: @left-nav-hover;
+}
+/* 高亮颜色 */
+.light{
+  position: relative;
+  background: @left-nav-light;
+}
+/*redCir小圆点的颜色*/
+.light .redCir{
+  width: 10px;
+  height: 10px;
+  background: @left-nav-redCir;
+  position: absolute;
+  top: 22px;
+  border-radius: 5px;
+  left: 20px;
+}
+/* =================左侧菜单样式-end================== */
+
+/* ======搜索按钮颜色=======*/
+.public-bgDate button{
+  border:none;
+  background-color: @content-search-btn;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+.public-bgDate button i{
+  color: @content-search-icon;
+}
+/* ======搜索按钮颜色-end=======*/
+
+/* =================右下角消息提示样式================== */
+/*右下角消息提示球的颜色*/
+.no-show{
+  width: 60px;
+  height: 60px;
+  background: @cont-ball-backcolor;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  text-align: center;
+  line-height: 60px;
+  display: none;
+  z-index: 1000;
+  cursor: pointer;
+}
+.no-show i{
+  font-size: 25px!important;
+  color: @cont-ball-iconcolor;
+}
+/* 消息栏展开之后的样式 */
+.red-messg{
+  width:100%;
+  height: 60px;
+  background: @cont-hint-backcolor;
+  color: @cont-hint-fontcolor;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+}
+/*消息栏展- 内容区底边线条颜色 */
+.li-messg{
+  width: 100%;
+  line-height: 60px;
+  border-bottom: 1px solid @cont-hint-bottom;
+  padding-left: 7px;
+}
+/*消息栏展- 内容区左边icon颜色 */
+.li-messg .iconfont{
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: @cont-hintnews-iconback;
+  border-radius: 50%;
+  color: @cont-hintnews-iconcolor;
+  font-size: 18px!important;
+  text-align: center;
+  line-height: 32px;
+}
+/* =================左下角消息提示样式-end================== */
+
+/* =================中间内容区-可以跳转页面的按钮-样式================== */
+/*内容区-您的位置颜色样式*/
+.public-top{
+  height: 35px;
+  color: @cont-jump-color;
+  background: @cont-jump-backcolor;
+  padding: 7px 0 0 20px;
+}
+.public-top i{
+  font-size: 14px;
+  color: #999999;
+}
+/*中间内容列表*/
+.public-bgContent{
+  padding:0 20px;
+}
+.public-bgListNav{
+  padding: 12px 0;
+  border-bottom: 1px solid #EDEDED;
+}
+.public-bgListNav .public-input{
+  font-size: 18px;
+  color:#000000;
+}
+.public-bgListNav .public-List{
+  font-size: 12px;
+  color:@cont-jump-color;
+  margin:0 5px;
+  padding: 7px 10px;
+  border-radius: 5px;
+}
+.public-bgListNav .public-List:hover{
+  background: @cont-jump-hover;
+  color: @cont-jump-hovercolor;
+  cursor:pointer;
+}
+.publicListHover{
+  background: @cont-jump-hover;
+  color:@cont-jump-hovercolor !important;
+  cursor:pointer;
+}
+/* =================中间内容区-可以跳转页面的按钮-样式-end================== */
+
+/* ===================下拉框和input框公共颜色===============*/
+/*select::-ms-expand {display: none; }*/
+select:not(.tabHint):active{
+  background-color:@not-tabHint-backcolor!important ;
+  border: 1px solid @not-tabHint-border!important;
+  color: @not-tabHint-color!important;
+}
+select.tabHint{
+  /*background: url("../images/barrow_07.png") no-repeat scroll right center transparent!important;*/
+  background-color:@tabHint-backcolor!important;
+  font-size: 12px;
+  padding-left: 3px;
+  width: 70px;  
+}
+select option{
+  background: white;  
+  color: #999999;
+}
+input::-webkit-input-placeholder{
+  color: #999999;
+}
+input::-moz-placeholder{
+  color: #999999;
+}
+input::-ms-input-placeholder{
+  color: #999999;
+}
+.sel-blue select option{
+  background-color: #29335c\9\0;  
+  color: white\9\0;
+}
+/* ===================下拉框和input框公共颜色-end===============*/
+
+/* =================表格内共通样式-================== */
+
+/* 列表内合同编号高亮的颜色 */
+.yellowBg>span{
+  background:@pact-item-backcolor;
+  padding:3px 15px;
+  color: @pact-item-color;
+}
+/* 操作记录按钮颜色 */
+.public-table button{
+  background-color: @table-btncolor;
+}
+/* =================表格内共通样式-end================== */
+
+/* =========底部分页颜色样式=========== */
+.footerLeft > span,
+.footerLeft > i,
+.footerLeft > ul > li{
+  float: left;
+  height: 30px;
+  width: 30px;
+  border:1px solid @paging-border-color;
+  line-height: 30px;
+  text-align: center;
+  color: @paging-color;
+  font-size: 12px;
+  margin-left: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.footerLeft > span{
+  width: 40px;
+  /*display: none;*/
+}
+.footerLeft > i{
+  font-style: normal;
+  width: 54px;
+  /*display: none;*/
+}
+.pageClass{
+  border:1px solid @paging-hover-color !important;
+  color: @paging-hover-color !important;
+}
+
+.footerLeft > ul >li:hover,.footerLeft > span:hover,.footerLeft > i:hover{
+  border:1px solid @paging-hover-color !important;
+  color: @paging-hover-color !important;
+}
+/* =========底部分页颜色样式-end=========== */
