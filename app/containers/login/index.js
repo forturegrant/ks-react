@@ -17,10 +17,12 @@ class login extends Component {
         this.state = {
             loading: false,
             username: '',
-            password: ''
+            password: '',
+            changeCode: ''
         }
         this.getUserName = this.getUserName.bind(this)
         this.getPassWord = this.getPassWord.bind(this)
+        this.getImgCode = this.getImgCode.bind(this)
         this.getCode = this.getCode.bind(this)
         this.logIn = this.logIn.bind(this)
     }
@@ -37,17 +39,28 @@ class login extends Component {
         })
     }
 
+    getImgCode(e) {
+        this.setState({
+            changeCode: e.target.value
+        })
+    }
+
     getCode() {
-        this.props.dispatch(fetchGetCode('', '', '', getCodeAction))
-        return false;
+        this.props.dispatch(fetchGetCode(getCodeAction))
+        //return false;
     }
 
     logIn() {
-        this.props.dispatch(fetchLogin)
+        this.props.dispatch(fetchLogin({
+            username: this.state.username,
+            password: this.state.password,
+            changeCode: this.state.changeCode,
+            token:this.props.getCode.token
+        }))
     }
 
     componentWillMount() {
-        this.props.dispatch(fetchGetCode('', '', '', getCodeAction))
+        this.props.dispatch(fetchGetCode(getCodeAction))
     }
 
     render() {
@@ -89,14 +102,14 @@ class login extends Component {
                                             <div className="form-group">
                                                 <input id="changeCode" type="text"
                                                        className="form-control logIn-height logIn-Code logIn-defaultInputCode"
-                                                       placeholder="验证码"/>
+                                                       placeholder="验证码" onChange={this.getImgCode}/>
                                                 <span
                                                     className="btn btn-default logIn-height logIn-Code logIn-defaultCheckCode getCode"
                                                     onClick={this.getCode}>
                                                     <img className="logIncodeImg codeImg" src={img}/>
                                                 </span>
                                                 <span id="login-btn"
-                                                      className="btn btn-default logIn-height logIn-btn logIn-hover">登录</span>
+                                                      className="btn btn-default logIn-height logIn-btn logIn-hover" onClick={this.logIn}>登录</span>
                                             </div>
                                         </div>
                                         <div className="col-md-2"></div>

@@ -8,9 +8,7 @@ import Login from './containers/login/index'
 export default () =>(
     <Router history={ hashHistory }>
         <div>
-            {/*<IndexRoute component={welcome} >*/}
-            <Route exact path="/" component={App} />
-            <Route path="/login" component={Login} />
+            <Route path="/" component={App} />
         </div>
     </Router>
 )

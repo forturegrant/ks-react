@@ -51,7 +51,7 @@ module.exports = {
                 loader: "less-loader"
             }]
         }, {
-            test: /\.(jpg|png)$/,
+            test: /\.(jpg|png|gif)$/,
             use: {
                 loader: "url-loader"
             }

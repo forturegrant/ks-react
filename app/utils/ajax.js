@@ -1,12 +1,13 @@
 import fetch from 'isomorphic-fetch'
 import axios from 'axios'
-import { prefix, suffix, timeout } from '../config'
+import qs from 'qs';
+import {prefix, suffix, timeout} from '../config'
 
 // axios配置
 const axiosBaseConfig = {
     baseURL: prefix,
     timeout: timeout,
-    headers: { 'Content-Type': 'text/plain' },
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     method: 'post',
     // 跨域请求，是否带上认证信息
     withCredentials: true, // default
@@ -19,15 +20,12 @@ const axiosBaseConfig = {
     // 请求数据预处理
     transformRequest: [(data, headers) => {
         // 加入token？
-        const token = sessionStorage.getItem('token')
-        if (token) {
-            data.token = token
+        let ret = '';
+        for (let it in data) {
+            ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
         }
-        // 请求对象转换成jon字符串
-        if (typeof data === 'object') {
-            return JSON.stringify(data)
-        }
-        return data
+        return ret
+        //return qs.stringfy(data)
     }],
     // 返回数据预处理
     transformResponse: [respData =>
