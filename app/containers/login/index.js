@@ -139,7 +139,7 @@ class login extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    logined: state.logined,
+    logined: state.login,
     getCode: state.getCode
 })
 
