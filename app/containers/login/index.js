@@ -55,7 +55,7 @@ class login extends Component {
             username: this.state.username,
             password: this.state.password,
             changeCode: this.state.changeCode,
-            token:this.props.getCode.token
+            token: this.props.getCode.token
         }))
     }
 
@@ -65,6 +65,7 @@ class login extends Component {
 
     render() {
         const {img} = this.props.getCode
+        const {logined} = this.props.logined
         return (
             <div className="logIn-container position-view">
                 <div className="logIn-center">
@@ -73,7 +74,6 @@ class login extends Component {
                             <div className="logIn-content-left"></div>
                             <div className="logIn-content-right">
                                 <form role="form" id="login-form">
-
                                     <div className="row">
                                         <div className="col-md-2"></div>
                                         <div className="col-md-8">
@@ -109,18 +109,28 @@ class login extends Component {
                                                     <img className="logIncodeImg codeImg" src={img}/>
                                                 </span>
                                                 <span id="login-btn"
-                                                      className="btn btn-default logIn-height logIn-btn logIn-hover" onClick={this.logIn}>登录</span>
+                                                      className="btn btn-default logIn-height logIn-btn logIn-hover"
+                                                      onClick={this.logIn}>登录</span>
                                             </div>
                                         </div>
                                         <div className="col-md-2"></div>
                                     </div>
                                 </form>
+
+
+                                <div className="logIn-welcome">
+                                    <span className="user"></span>
+                                    <span>,欢迎您回来！正在为您跳转页面...</span>
+                                    <span className="intervalSecond">3</span>
+                                    <span>s</span>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                    <div className="logIn-bottomTitle">
-                        Copyright © 2016~<span className="year">2018</span>深圳市凯盛资产管理有限公司 粤ICP备17016486号-1技术支持：<u><a
-                        href="#" target="_blank">前海米奇（深圳）科技 </a></u>
+                        <div className="logIn-bottomTitle">
+                            Copyright © 2016~<span className="year">2018</span>深圳市凯盛资产管理有限公司 粤ICP备17016486号-1技术支持：<u><a
+                            href="#" target="_blank">前海米奇（深圳）科技 </a></u>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -129,7 +139,7 @@ class login extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    login: state.login,
+    logined: state.logined,
     getCode: state.getCode
 })
 

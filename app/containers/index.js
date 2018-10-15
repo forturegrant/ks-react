@@ -5,6 +5,7 @@ import {
     Switch,
     Redirect,
 } from 'react-router-dom'
+import {connect} from 'react-redux'
 import Login from './login/index.js'
 import '../style/style.less'
 
@@ -24,7 +25,7 @@ class App extends Component {
         const {isFetching}= this.props
         return (
             <div>
-                {isFetching && <div id="loading" style={{display: 'none'}} className="mloading-container">
+                {isFetching && <div id="loading" className="mloading-container">
                     <div className="mloading active">
                         <div className="mloading-body">
                             <div className="mloading-bar" style={{marginTop: '0px', marginLeft: '-27.5px'}}>

@@ -1,5 +1,5 @@
 const initialState = {
-    loading: false
+    loaded: false
 }
 
 export function startLogin(text) {
