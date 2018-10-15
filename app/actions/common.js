@@ -1,15 +1,17 @@
 import axiosInstance from '../utils/ajax.js'
-import {fetchStart} from '../reducers'
-import {fetchEnd} from '../reducers'
+import {fetchStart,fetchEnd} from '../reducers'
+import history from '../history'
+
 
 
 export const fetchLogin = (values) => (dispatch) => {
-    dispatch(fetchStart())
     //startAction && dispatch(startAction());
+    //dispatch(fetchStart());
     axiosInstance.post('manager/adminLogin.do', values).then((res) => {
         //cal && cal(res);
         if(res.data.type == '1'){
             dispatch(fetchEnd())
+            history.push('/content/console');
         }else{
             dispatch(fetchEnd())
         }

@@ -1,0 +1,324 @@
+/*通用样式*/
+*{
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+ul > li{
+	list-style-type:none;
+}
+a{
+	text-decoration: none;
+}
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+/*首页布局样式*/
+/*左浮动*/
+.floatLeft{
+	float:left;
+}
+/*ngView背景视图*/
+#bgView{
+	top:0px;
+}
+/*指令视图 ng-view*/
+.ngView{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left:0;
+	right:0;
+}
+/*position布局 模板公共样式*/
+/*.position-view{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left:0;
+	right:0;
+}*/
+
+.temright{
+	float:left;
+	height: 100%;
+	width: 90%;
+	/*overflow-y: auto;*/
+}
+
+	/*禹 以下3个样式用作公共布局 includeStyle一级  bgSortTwo bgSortTwo二级*/
+	.includeStyle{
+		width: 100%;
+		height: 100%;
+	}
+		.bgSortTwo{
+			/*position: relative;*/
+			width: 100%;
+			height: 100%;
+		}
+			.bgSortScroll{
+				position: absolute;
+				top: 151px;
+				bottom: 0;
+				left: 10%;
+				right: 0;
+				overflow: auto;
+				margin-left: 10px;
+			}
+/*左边二级导航样式*/
+.temList{
+	padding-left: 0;
+}
+.temList > li:hover{
+	cursor: pointer;
+}
+
+
+
+
+/*导航中间样式*/
+.nav-center{
+	width:700px;
+	height: 66px;
+}
+	.nav-center #nav-parent{
+		overflow: hidden;
+		margin-bottom: 0;
+		padding: 0;
+		height: 66px;
+	}
+	.nav-center #nav-parent li{
+		float:left;
+		height: 66px;
+		line-height:66px;
+		overflow: hidden;
+	}
+	
+/*导航右边*/
+.nav-right{
+	float:right;
+}
+
+
+
+/*信息提醒样式开始*/
+.mesFalse,.mesTrue,.mesI{
+	position: absolute;
+	right: -250px; /* 48px*/
+	height: 83px;
+	min-width: 248px;
+	text-align: center;
+	border-radius: 5px;
+	display: none;
+	z-index: 1002;
+	padding: 0 20px;
+	cursor: pointer;
+}
+.mes > div{
+	width: 100%;
+	height: 100%;
+	line-height: 81px;
+}
+	.mesFalse{
+		bottom: 245px;
+		background: #F2DEDE;
+		border:1px solid #EBCDD2;
+	}
+		
+	.mesTrue{
+		bottom: 140px;
+		background: #DFF0D8;
+		border:1px solid #D6E9C6;
+	}	
+	.mesI{
+		bottom: 35px;
+		background: #fbdb99;
+		border:1px solid #f7b733;
+	}	
+		/*iconfont图标*/
+		.mesTrue i{
+			background: #DFF0D8;
+			color: #3C763D;
+			font-size: 32px;
+		}
+		.mesFalse i{
+			background: #F2DEDE;
+			color: #A94442;
+			font-size: 32px;
+		}
+		.mesI i{
+			background: #fbdb99;
+			color: #ff8400;
+			font-size: 32px;
+		}
+		/*span 获取后台信息写入span*/
+		.mesTrue span{
+			color: #3C763D; 
+		}
+		.mesFalse span{
+			color: #A94442;
+		}
+		.mesI span{
+			color: #ff8400;
+		}
+		.mesTrue span,.mesFalse span,.mesI span{
+			font-size: 16px;
+			font-weight: 600;
+			display: inline-block;
+			height: 32px;
+			-webkit-transform: translateY(-6px);
+			-moz-transform: translateY(-6px);
+			-ms-transform: translateY(-6px);
+			-o-transform: translateY(-6px);
+		}
+
+
+/*插件autocomplete样式 智能联想*/
+.autocomplete{
+	margin: 0 auto;display: inline-block;
+}
+
+
+
+
+/*测试站点代码*/
+.userImg{
+	position: absolute;
+	right: 9px;
+	bottom: 2px;
+	width: 100px;
+	height: 100px;
+	/*background: url(../../img/user/user.jpg) no-repeat center;*/
+}
+.userImg > div:hover + .class-hezi1{
+	display: block;
+}
+.userImg > div{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 77px;
+	height: 77px;
+	border-radius: 50%;
+	background: #3986e3;
+	cursor: pointer;
+}
+.userImg > div i{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	color: #FFFFFF;
+	font-size: 30px;
+	position: absolute;
+	left: -15PX;
+	top: -20PX;
+	margin-top: 50%;
+	margin-left: 50%;
+}
+.class-hezi1{
+	width: 90px;
+	height: 30px;
+	border-radius: 4px;
+	line-height: 30px;
+	background: black;
+	opacity: 0.6;
+	position: absolute;
+	right: 21px;
+	top: -55px;
+	z-index: 100;
+	display: none;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+}
+.class-heziii{
+	display: inline-block;
+	position: absolute;
+	top: 30px;
+	right: 35px;
+	width: 0px;
+	height: 0px;
+	border-width: 9px;
+	border-color: transparent transparent black transparent;
+	border-style:solid;
+	transform: rotate(180deg);
+}
+
+.inst-detail label{
+	width: 100px !important;
+}
+.inst-detail input{
+	width: 75px !important;
+}
+.inst-detail>span {
+	display: inline-block;
+  width: 183px;
+  margin: 4px 0;
+}
+.inst-detail>span>span{
+	display: inline-block;
+  width: 68px;
+}
+.fc-adress{
+	float: left;
+  margin-left: 20px;
+  width: 400px !important;
+}
+.mess-reply{
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor:pointer;
+	background-color: #E55A5B;
+	border: 1px solid #E55A5B;
+	border-radius: 6px;
+	color: #fff;
+	float: right;
+	margin-right: 10px;
+}
+.mess-reply .iconfont,.reply-it .iconfont{
+	font-size: 20px;
+  vertical-align: middle;
+}
+.reply-it{
+  width: 84px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #29335c;
+  border: 1px solid #29335c;
+  border-radius: 6px;
+  color: #fff;
+  float: right;
+  margin-right: 10px;
+  text-indent: 0;
+}
+.line-h-40{
+	line-height: 40px;
+}
+.bottom-none{
+	border-bottom-color: #fff !important;
+}
+.reply-area{
+	background-color: #fff !important;
+  text-align: left !important;
+  text-indent: 12px;
+}
+.news-show{
+   width: 98%;
+  line-height: 40px;
+  border-top: #ddd;
+  border-top-width: 2px;
+  border-top-style: dotted;
+  margin-left: 12px;
+  text-indent: 0px;
+}
+.news-time{
+  font-size: 12px;
+  color: #e55a5b;
+  margin-bottom:15px;
+  text-indent: 12px;
+}
+
