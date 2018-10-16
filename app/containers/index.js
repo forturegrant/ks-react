@@ -15,13 +15,6 @@ class App extends Component {
         super(props)
     }
 
-    componentWillMount() {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            this.props.history.push('/login');
-        }
-    }
-
     render() {
         const {isFetching}= this.props
         return (
@@ -36,7 +29,7 @@ class App extends Component {
                         </div>
                     </div>
                 </div>}
-                <Route path="/login" component={Login}/>
+                <Route path="/login" component={Login} />
                 <Route path="/content" component={Content} />
                 <div className="winBoxPlus">
                     {/*<!-- 加载弹窗盒子容器 -->*/}
@@ -82,6 +75,13 @@ class App extends Component {
                 </div>
             </div>
         )
+    }
+
+    componentWillMount() {
+        /*const token = localStorage.getItem('token');
+        if (!token) {
+            this.props.history.push('/login');
+        }*/
     }
 }
 

@@ -7,10 +7,37 @@ import {
     Link
 } from 'react-router-dom'
 import Console from './console/index.js'
+import './index.less'
+
+const menu = [
+    {menuUrl: 'console', menuName: '控制台'},
+    {menuUrl: 'loanBefore', menuName: '进件管理'},
+    {menuUrl: 'loanLater', menuName: '贷后'},
+    {menuUrl: 'customer', menuName: '客户'},
+    {menuUrl: 'operationManager', menuName: '运营管理'},
+    {menuUrl: 'application', menuName: '应用'},
+    {menuUrl: 'set', menuName: '设置'},
+    {menuUrl: 'detail', menuName: '数据'}
+]
 
 export default class Content extends Component {
-    render(){
-        return(
+    constructor(props) {
+        super(props)
+        this.state = {
+            bgColor: 0
+        }
+        this.changeBgColor = this.changeBgColor.bind(this);
+    }
+
+    changeBgColor(index) {
+        this.setState({
+            bgColor: index
+        })
+    }
+
+    render() {
+        var {url} = this.props.match;
+        return (
             <div>
                 <div className="">
                     {/*<!--此处作为更新视图容器-->*/}
@@ -22,37 +49,26 @@ export default class Content extends Component {
                             <div className="nav-left-name floatLeft">金融管理系统</div>
                         </div>
                         <div className="nav-center floatLeft">
-                            <ul>
-                                <li className="index actives">
-                                    <Link className="js-menu-item" to="/console">控制台</Link>
-                                </li>
-                                <li className="index">
-                                    <Link className="js-menu-item" to="/loanBefore">进件管理</Link>
-                                </li>
-                                <li className="index">
-                                    <Link className="js-menu-item" to="/loanLater">贷后</Link>
-                                </li>
-                                <li className="index">
-                                    <Link className="js-menu-item" to="/customer">客户</Link>
-                                </li>
-                                <li className="index">
-                                    <Link className="js-menu-item" to="/operationManager">运营管理</Link>
-                                </li>
-                                <li className="index">
-                                    <Link className="js-menu-item" to="/application">应用</Link>
-                                </li>
-                                <li className="index">
-                                    <Link className="js-menu-item" to="/set">设置</Link>
-                                </li>
-                                <li className="index">
-                                    <Link className="js-menu-item" to="/detail">数据</Link>
-                                </li>
+                            <ul id="nav-parent">
+                                {
+                                    menu.map((item, index) =>
+                                        (<li key={index} className={this.state.changeBgColor == index ? "actives" : null} onClick={this.changeBgColor}>
+                                            <Link className="js-menu-item"
+                                                  to={`${url}/${item.menuUrl}`}>{item.menuName}</Link>
+                                        </li>)
+                                    )
+                                }
                             </ul>
                         </div>
                     </div>
                 </div>
-                <Route path="/console" component={Console} />
+                <Route path="/console" component={Console}/>
             </div>
         )
     }
+
+    componentDidMount() {
+        console.log(this.props);
+    }
+
 }
