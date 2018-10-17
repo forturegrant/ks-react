@@ -31,13 +31,13 @@ html,body{
 	right:0;
 }
 /*position布局 模板公共样式*/
-/*.position-view{
+.position-view{
 	position: absolute;
 	top:0;
 	bottom: 0;
 	left:0;
 	right:0;
-}*/
+}
 
 .temright{
 	float:left;
@@ -58,7 +58,7 @@ html,body{
 		}
 			.bgSortScroll{
 				position: absolute;
-				top: 151px;
+				top: 85px;
 				bottom: 0;
 				left: 10%;
 				right: 0;

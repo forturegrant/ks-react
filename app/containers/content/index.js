@@ -7,7 +7,10 @@ import {
     Link
 } from 'react-router-dom'
 import Console from './console/index.js'
+import LoanBefore from './loanBefore/index.js'
 import './index.less'
+import './new-index.css'
+import './public-content.css'
 
 const menu = [
     {menuUrl: 'console', menuName: '控制台'},
@@ -26,7 +29,7 @@ export default class Content extends Component {
         this.state = {
             bgColor: 0
         }
-        this.changeBgColor = this.changeBgColor.bind(this);
+        //this.changeBgColor = this.changeBgColor.bind(this);
     }
 
     changeBgColor(index) {
@@ -39,7 +42,7 @@ export default class Content extends Component {
         var {url} = this.props.match;
         return (
             <div>
-                <div className="">
+                <div className="" style={{overflow:'hidden'}}>
                     {/*<!--此处作为更新视图容器-->*/}
                     <div className="nav-bg">
                         <div className="nav-left floatLeft">
@@ -52,7 +55,8 @@ export default class Content extends Component {
                             <ul id="nav-parent">
                                 {
                                     menu.map((item, index) =>
-                                        (<li key={index} className={this.state.changeBgColor == index ? "actives" : null} onClick={this.changeBgColor}>
+                                        (<li key={index} className={`index ${this.state.bgColor === index ? "actives" : ""}`}
+                                             onClick={this.changeBgColor.bind(this, index)}>
                                             <Link className="js-menu-item"
                                                   to={`${url}/${item.menuUrl}`}>{item.menuName}</Link>
                                         </li>)
@@ -62,13 +66,21 @@ export default class Content extends Component {
                         </div>
                     </div>
                 </div>
-                <Route path="/console" component={Console}/>
+                <Switch>
+                    <Route path={`${url}/console`} component={Console}/>
+                    <Route path={`${url}/loanBefore`} component={LoanBefore}/>
+                    <Route path="/console" component={Console}/>
+                    <Route path="/console" component={Console}/>
+                    <Route path="/console" component={Console}/>
+                    <Route path="/console" component={Console}/>
+
+                </Switch>
             </div>
         )
     }
 
     componentDidMount() {
-        console.log(this.props);
+        //console.log(this.props);
     }
 
 }
