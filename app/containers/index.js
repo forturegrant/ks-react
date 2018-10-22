@@ -78,10 +78,10 @@ class App extends Component {
     }
 
     componentWillMount() {
-        /*const token = localStorage.getItem('token');
+        const token = localStorage.getItem('token');
         if (!token) {
             this.props.history.push('/login');
-        }*/
+        }
     }
 }
 
@@ -97,3 +97,4 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(App)
+
