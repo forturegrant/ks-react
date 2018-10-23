@@ -1,20 +1,20 @@
 import {combineReducers} from 'redux'
-import {login} from './login.js'
-import {getCode} from './getCode.js'
+import {Login} from './login'
+import {getList} from './content/loanBefore/getList'
 
 const initialState = {
     isFetching: false
 }
 
-export function fetchStart(){
-    return{
-        type:"FETCH_START"
+export function fetchStart() {
+    return {
+        type: "FETCH_START"
     }
 }
 
-export function fetchEnd(){
-    return{
-        type:"FETCH_END"
+export function fetchEnd() {
+    return {
+        type: "FETCH_END"
     }
 }
 
@@ -37,8 +37,8 @@ function reducer(state = initialState, action) {
 
 export const allReducer = combineReducers({
     globalState: reducer,
-    login: login,
-    getCode: getCode
+    login: Login,
+    getList: getList
 })
 
 

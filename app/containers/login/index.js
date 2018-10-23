@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom'
 import {Form, Row, Col, Spin, Input, Icon, Button} from 'antd'
 import {fetchLogin} from "../../actions/common";
 import {fetchGetCode} from "../../actions/common";
-import {getCodeAction} from '../../reducers/getCode.js'
-import {startLogin, endLogin} from '../../reducers/login'
+import {getCodeAction} from '../../reducers/login/getCode.js'
+//import {startLogin, endLogin} from '../../reducers/login'
 
 const FormItem = Form.Item
 
@@ -139,8 +139,8 @@ class login extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    logined: state.login,
-    getCode: state.getCode
+    logined: state.login.login,
+    getCode: state.login.getCode
 })
 
 const mapDispatchToProps = (dispatch) => ({
