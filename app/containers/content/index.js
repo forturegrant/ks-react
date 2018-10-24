@@ -39,7 +39,7 @@ export default class Content extends Component {
     }
 
     render() {
-        var {url} = this.props.match;
+        const {url} = this.props.match;
         return (
             <div>
                 <div className="" style={{overflow:'hidden'}}>
@@ -73,7 +73,6 @@ export default class Content extends Component {
                     <Route path="/console" component={Console}/>
                     <Route path="/console" component={Console}/>
                     <Route path="/console" component={Console}/>
-
                 </Switch>
             </div>
         )
