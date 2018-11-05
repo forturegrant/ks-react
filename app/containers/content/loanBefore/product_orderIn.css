@@ -1,0 +1,42 @@
+.quare{
+    width: 240px;
+    height: 166px;
+    background-color: #e7b1b1;
+    border-radius: 6px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 90px;
+    margin-right: 40px;
+    position: relative;
+}
+.product_img{
+    margin-top: 35px;
+}
+.product_name{
+    font-size: 26px;
+    margin-top: 17px;
+    font-family: "Sakkal Majalla"
+}
+.next{
+    background-color: #e55a5b;
+    color: white;
+    width: 100px;
+    text-align: center;
+    padding: 10px 0 ;
+    border-radius: 4px;
+    margin-top: 90px;
+    margin-left: 150px;
+}
+.D-a{
+    cursor: pointer;
+}
+.selected{
+    background-color: #e55a5b;
+}
+.selected_img{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}

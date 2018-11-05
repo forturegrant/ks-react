@@ -2,6 +2,7 @@ import axiosInstance from '../utils/ajax.js'
 import history from '../history'
 import {fetchStart, fetchEnd} from '../reducers'
 import {getListAction} from '../reducers/content/loanBefore/getList'
+import {getProductListAction} from '../reducers/content/loanBefore/getProductList'
 
 export function fetchLogin(values) {
     return async function (dispatch) {
@@ -52,4 +53,19 @@ export function fetchGetList(values) {
     //dispatch(fetchStart());
 }
 
+export function fetchGetProductList(){
+    return async function(dispatch){
+        try{
+            dispatch(fetchStart())
+            const response = await axiosInstance.post('manager/orderInfoProduct.do')
+            if (response.data.type === 1) {
+                dispatch(fetchEnd())
+                dispatch(getProductListAction(response.data.content.list))
+                //localStorage.setItem('token','1');
+                //history.push('/content/console');
+            }
+        }catch(e){
 
+        }
+    }
+}

@@ -8,6 +8,7 @@ import {
 import {fetchGetList} from "../../../actions/common";
 import List from './list'
 import ProductOrderIn from './productOrderIn'
+import OrderIn from './orderIn.js'
 
 export default class LoanBefore extends Component {
     constructor(props) {
@@ -88,8 +89,9 @@ export default class LoanBefore extends Component {
                             </div>
                             {/*<!--滚动div   -->*/}
                             <Switch>
-                                <Route path={`${url}/`} component={List}/>
+                                <Route exact path={`${url}/`} component={List}/>
                                 <Route path={`${url}/productOrderIn`} component={ProductOrderIn}/>
+                                <Route path={`${url}/orderIn`} component={OrderIn}/>
                             </Switch>
                         </div>
                     </div>
@@ -98,4 +100,3 @@ export default class LoanBefore extends Component {
         )
     }
 }
-

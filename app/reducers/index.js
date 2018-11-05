@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
 import {Login} from './login'
-import {getList} from './content/loanBefore/getList'
+import {LoanBefore} from './content/loanBefore'
 
 const initialState = {
     isFetching: false
@@ -38,7 +38,7 @@ function reducer(state = initialState, action) {
 export const allReducer = combineReducers({
     globalState: reducer,
     login: Login,
-    getList: getList
+    LoanBefore: LoanBefore
 })
 
 

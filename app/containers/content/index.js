@@ -4,7 +4,8 @@ import {
     Route,
     Switch,
     Redirect,
-    Link
+    Link,
+    NavLink
 } from 'react-router-dom'
 import Console from './console/index.js'
 import LoanBefore from './loanBefore/index.js'
@@ -55,10 +56,10 @@ export default class Content extends Component {
                             <ul id="nav-parent">
                                 {
                                     menu.map((item, index) =>
-                                        (<li key={index} className={`index ${this.state.bgColor === index ? "actives" : ""}`}
+                                        (<li key={index} /*className={`index ${this.state.bgColor === index ? "actives" : ""}`}*/
                                              onClick={this.changeBgColor.bind(this, index)}>
-                                            <Link className="js-menu-item"
-                                                  to={`${url}/${item.menuUrl}`}>{item.menuName}</Link>
+                                            <NavLink className="js-menu-item" activeClassName="actives"
+                                                  to={`${url}/${item.menuUrl}`}>{item.menuName}</NavLink>
                                         </li>)
                                     )
                                 }

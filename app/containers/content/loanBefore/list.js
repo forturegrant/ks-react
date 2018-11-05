@@ -162,12 +162,9 @@ class List extends Component {
                             <button className="tabHint">
                                 <Link to={`${url}/productOrderIn`}>录入订单</Link>
                             </button>
-                            {/*<!-- end ngIf: HbHr.hr58 && operation._type=='orderList' -->*/}
                         </div>
-                        {/*<!-- end ngIf: operation.batch -->*/}
                     </div>
                 </div>
-                {/*<!-- end ngIf: HbHr.hr54 -->*/}
             </div>
         )
     }
@@ -185,7 +182,7 @@ class List extends Component {
 
 const mapStateToProps = (state) => ({
     //isFetching: state.globalState.isFetching
-    list: state.getList.list
+    list: state.LoanBefore.getList.list
 })
 
 const mapDispatchToProps = (dispatch) => ({

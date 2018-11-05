@@ -55,7 +55,8 @@ class login extends Component {
             username: this.state.username,
             password: this.state.password,
             changeCode: this.state.changeCode,
-            token: this.props.getCode.token
+            token: this.props.getCode.token,
+            type: 1
         }))
     }
 
