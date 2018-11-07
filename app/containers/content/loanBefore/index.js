@@ -5,7 +5,6 @@ import {
     Route,
     Switch
 } from 'react-router-dom'
-import {fetchGetList} from "../../../actions/common";
 import List from './list'
 import ProductOrderIn from './productOrderIn'
 import OrderIn from './orderIn.js'
