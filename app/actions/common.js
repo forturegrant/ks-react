@@ -3,6 +3,8 @@ import history from '../history'
 import {fetchStart, fetchEnd} from '../reducers'
 import {getListAction} from '../reducers/content/loanBefore/getList'
 import {getProductListAction} from '../reducers/content/loanBefore/getProductList'
+import {getCityAction} from '../reducers/content/loanBefore/orderIn'
+import {getAreaAction} from '../reducers/content/loanBefore/orderIn'
 
 export function fetchLogin(values) {
     return async function (dispatch) {
@@ -70,14 +72,34 @@ export function fetchGetProductList(){
     }
 }
 
-export function fetchSaveOrder(){
+
+export function fetchGetPCA(value,type){
+    return async function(dispatch,getState){
+        try{
+            dispatch(fetchStart());
+            const response = await axiosInstance.post('manager/ajaxqueryRegion.do',value)
+            if(response.data){
+                dispatch(fetchEnd())
+                if(type === 'getCity'){
+                    dispatch(getCityAction(response.data));
+                }else if(type === 'getArea'){
+                    dispatch(getAreaAction(response.data));
+                }
+            }
+        }catch (e){
+
+        }
+    }
+}
+
+export function fetchSaveOrder(values){
     return async function(dispatch){
         try{
             dispatch(fetchStart())
-            const response = await axiosInstance.post('manager/insertOrderPublicNew.do')
+            const response = await axiosInstance.post('manager/insertOrderPublicNew.do',values)
             if (response.data.type === 1) {
                 dispatch(fetchEnd())
-                dispatch(getProductListAction(response.data.content.list))
+                ///dispatch(getProductListAction(response.data.content.list))
                 //localStorage.setItem('token','1');
                 //history.push('/content/console');
             }

@@ -2,6 +2,7 @@ import fetch from 'isomorphic-fetch'
 import axios from 'axios'
 import qs from 'qs';
 import {prefix, suffix, timeout} from '../config'
+import {history} from '../history.js'
 
 // axios配置
 const axiosBaseConfig = {
@@ -28,7 +29,12 @@ const axiosBaseConfig = {
         //return qs.stringfy(data)
     }],
     // 返回数据预处理
-    transformResponse: [respData =>
+    transformResponse: [(respData) => {
+        if(respData === null){
+            history.push('/login');
+        }else{
+            return respData;
+        }
         // 检查返回status值
         // if (typeof respData.status !== 'undefined') {
         //   if (respData.status === 1) {
@@ -36,7 +42,7 @@ const axiosBaseConfig = {
         //   }
         //   throw new Error(respData.errMsg || 'respData.status不为0')
         // }
-        respData,
+    }
     ],
 }
 // axios 实例
