@@ -26,16 +26,24 @@ class orderIn extends Component {
         this.props.form.validateFields((err, values) => {
             console.log(values)
             const data = {
-                borrowers: {
-                    realName: values.realName,
-                    idCard: values.idCard,
-                    birthDate: values.birthDate,
-                    cellphone: values.cellphone,
-                    sex: values.sex
-                },
+                personalInfos: {
+                    borrowers: {
+                        realName: values.realName,
+                        idCard: values.idCard,
+                        birthDate: values.birthDate,
+                        cellphone: values.cellphone,
+                        sex: values.sex
+                    }, perInfo: {
+                        residProvince: values.residProvince,
+                        residCity: values.residCity,
+                        residArea: values.residArea,
+                        residence: values.residence,
+                        addrProvince: values.addrProvince,
+                    }
+                }
             }
             if (!err) {
-                this.props.dispatch(fetchSaveOrder(values));
+                this.props.dispatch(fetchSaveOrder({frontData:JSON.stringify(data)}));
             }
         });
     }

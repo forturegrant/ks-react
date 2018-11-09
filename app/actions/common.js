@@ -85,6 +85,8 @@ export function fetchGetPCA(value,type){
                 }else if(type === 'getArea'){
                     dispatch(getAreaAction(response.data));
                 }
+            }else{
+                dispatch(fetchEnd());
             }
         }catch (e){
 
@@ -102,6 +104,8 @@ export function fetchSaveOrder(values){
                 ///dispatch(getProductListAction(response.data.content.list))
                 //localStorage.setItem('token','1');
                 //history.push('/content/console');
+            }else if(response.data.type === -1){
+                dispatch(fetchEnd())
             }
         }catch(e){
 
