@@ -7,7 +7,7 @@ module.exports = {
         "webpack-dev-server/client?http://0.0.0.0:3000",
         "webpack/hot/only-dev-server",
         // 这里是你的入口文件
-        './app/console.js'
+        './app/index.js'
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -16,9 +16,9 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './console.tpl.html',
+            template: './index.tpl.html',
             inject: 'body',
-            filename: './console.html'
+            filename: './index.html'
         }),
         new webpack.HotModuleReplacementPlugin()
     ],

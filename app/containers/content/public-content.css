@@ -1,0 +1,1176 @@
+/*说明: 此文件css用作贷前公共列表 其他模块可以复用 私有样式自己设置*/
+
+a, button, input, select {
+    outline: none !important;
+}
+
+.ks-content {
+    width: 100%;
+    height: 100%;
+}
+
+/*日期样式*/
+.public-bgDate {
+    padding: 20px 0;
+    color: #A3A3A3;
+}
+
+.public-bgDate input {
+    border: 1px solid #DDDDDD;
+    width: 125px;
+    height: 35px;
+    border-radius: 2px;
+    padding-left: 10px;
+}
+
+.public-bgDate i {
+    color: #999999;
+}
+
+.public-bgDate > span {
+    position: relative;
+    margin-right: 5px;
+}
+
+.public-bgDate > span > i {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.public-bgDate select {
+    border: 1px solid #DDDDDD;
+    width: auto;
+    height: 35px;
+    border-radius: 3px;
+    padding-left: 10px;
+    margin-right: 5px;
+}
+
+.bord-sol-DDD {
+    border: 1px solid #DDDDDD !important;
+    border-radius: 3px;
+    padding-right: 6px;
+}
+
+/*提示操作样式*/
+.public-bghint {
+    padding: 12px 20px;
+    background: #F7F7F7;
+    color: #666666;
+}
+
+.public-bghint i {
+    color: #BFBFBF;
+    font-size: 10px;
+}
+
+.public-ulList {
+    padding: 20px 20px 0px 40px;
+    margin-bottom: 0;
+}
+
+.public-ulList li {
+    list-style: disc;
+    color: #999999;
+    line-height: 30px;
+}
+
+/*公共table样式*/
+.public-table {
+    margin-bottom: 0px !important;
+    /*width: 1300px !important;*/
+    min-width: 100% !important;
+}
+
+/*.public-table .lastTd{
+	width: 160px !important;
+}*/
+.public-table thead {
+    background: #F7F7F7;
+}
+
+.public-table tr td:nth-child(1) {
+    min-width: 40px;
+}
+
+.public-table thead tr td {
+    padding: 17px 0 !important;
+    text-align: center;
+}
+
+.public-table tbody tr td {
+    vertical-align: middle !important;
+    text-align: center;
+    font-size: 12px;
+    height: 70px;
+}
+
+.public-table tbody input[type="checkbox"] {
+    /*margin:0 10px;*/
+}
+
+.public-table select {
+    background-color: #29335C;
+}
+
+.public-table button {
+    background-color: #E55A5B;
+}
+
+.tabHint {
+    width: 70px;
+    height: 31px;
+    color: #ffffff;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+
+.tabDelete {
+    width: 70px;
+    height: 31px;
+    color: red;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+
+/*底部分页栏*/
+
+.public-table tfoot td:nth-child(1) {
+    text-align: center;
+}
+
+.public-table tfoot td:nth-child(1) input {
+    margin-top: 25px;
+}
+
+.public-table tr td:nth-child(1) {
+    /*border-top:1px solid #DDDDDD;*/
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.public-table tfoot td:nth-child(2) {
+    /*border-top:1px solid #DDDDDD;*/
+    padding-left: 0;
+}
+
+.public-botPage-left {
+    padding: 15px 0;
+    float: left;
+}
+
+.public-botPage-left span span {
+    font-size: 12px;
+}
+
+.public-botPage-left select {
+    border: 1px solid #DDDDDD;
+    color: #a9a9a9;
+    width: 100px;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: 35px;
+    box-shadow: 0px 1px 1px rgba(198, 198, 198, 0.3) inset;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("../../images/arrow.png") no-repeat scroll right center transparent !important;
+}
+
+.public-botPage-left button {
+    height: 35px;
+    width: 100px;
+    background: #E55A5B;
+    margin-left: 10px;
+}
+
+.public-botPage-right {
+    float: right;
+    padding: 15px 0;
+}
+
+/*录入订单*/
+/*借款信息开始*/
+.public-PoBefore-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.public-PoBefore-titLeft {
+    position: absolute;
+    left: 0;
+}
+
+.public-PoBefore-titRight {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.public-PoBefore-title span {
+    font-size: 12px;
+}
+
+.public-PoBefore-nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    height: 40px;
+}
+
+.public-PoBefore-nav li {
+    float: left;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.public-PoBefore-nav li span {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+}
+
+.public-PoBefore-nav li span a {
+    position: relative;
+    border: 1px solid #DDDDDD;
+    display: inline-block;
+    padding: 0 10px;
+    min-width: 100px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-align: center;
+    line-height: 39px;
+    color: #999999;
+    background: #ffffff;
+}
+
+.public-PoBefore-nav li span a.active, .public-PoBefore-nav .active.activePublic {
+    border-bottom: none;
+    line-height: 40px;
+}
+
+.public-PoBefore-nav .activePublic {
+    border-bottom: none;
+    line-height: 40px;
+}
+
+.public-PoBefore-nav li span a.activePublicNew {
+    border-bottom: none !important;
+    line-height: 40px;
+}
+
+/*中间内容 公共部分*/
+.public-content {
+    border: 1px solid #DDDDDD;
+    padding: 20px 20px 25px 20px;
+    margin-bottom: 120px;
+}
+
+.public-content .public-content-chinese {
+    font-size: 12px;
+}
+
+.public-content-title {
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.public-content-title span:nth-child(1) {
+    color: #333333;
+}
+
+.public-content-Po {
+    color: #F7B733;
+    font-size: 12px;
+}
+
+/*中间列表*/
+.public-content-tab {
+    margin: auto;
+    /*border-collapse: collapse;*/
+    width: 100%;
+    table-layout: auto;
+}
+
+.public-content-tab td, .public-content-tabSan td {
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    height: 60px;
+}
+
+.public-content-tab td:nth-child(2n+1) span {
+    color: #D5342D;
+}
+
+.minImg {
+    position: relative;
+}
+
+.minImg ._pre, .minImg ._next {
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    position: absolute;
+    top: 17px;
+    cursor: pointer;
+}
+
+.minImg ._pre:hover, .minImg ._next:hover {
+    opacity: 0.8;
+}
+
+.minImg ._pre {
+    border-right: 7px solid #666;
+    left: 14px;
+}
+
+.minImg ._next {
+    border-left: 7px solid #666;
+    right: 9px;
+}
+
+/*tbody*/
+/*.sanji{
+	text-align: left !important;
+}*/
+
+.sanji i, .autocom > .span {
+    width: 90%;
+    text-align: left;
+    display: inline-block;
+}
+
+.sanji .span select {
+    float: left;
+    width: 82px !important;
+    margin-right: 10px;
+}
+
+.sanji .span input {
+    float: right;
+    width: 138px !important;
+}
+
+.autocom > .span > span {
+    float: left;
+    width: 43% !important;
+}
+
+.autocom > .span > input {
+    float: right;
+    width: 57% !important;
+    height: 32px !important;
+}
+
+.backBank {
+    text-align: left !important;
+    padding: 0 15px !important;
+}
+
+.backBank input:nth-child(1) {
+    width: 38% !important;
+}
+
+.backBank input:nth-child(2) {
+    width: 60% !important;
+}
+
+.public-content-tab td:nth-child(2n+1), .public-content-tabSan {
+    background-color: #E8EAF1;
+    color: #666666;
+}
+
+.public-content-tab td:nth-child(2n) {
+    height: 60px;
+    width: 177px;
+    color: #999999;
+}
+
+.public-content-tab td:nth-child(2n) select {
+    width: 138px;
+    height: 32px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #DDDDDD;
+}
+
+.xiala input {
+    width: 40% !important;
+}
+
+.investigate {
+    text-align: left !important;
+    padding: 10px 20px !important;
+}
+
+.public-content-tab label {
+    font-weight: normal;
+}
+
+/*正常input样式*/
+.public-content-tab td input[type="text"] {
+    width: 138px;
+    height: 32px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #DDDDDD;
+}
+
+/*底部tabel*/
+.public-content-tab .tfootTab td:nth-child(2) {
+    text-align: left;
+}
+
+.public-content-tab .tfootTab td:nth-child(2) label,
+.public-content-tab .tfootTab td:nth-child(2) select {
+    width: 76px;
+    color: #999999;
+    box-shadow: 0px 1px 1px rgba(198, 198, 198, 0.5) inset;
+    height: 33px;
+    padding: 1px 0;
+}
+
+.public-content-tab .tfootTab td:nth-child(2) label input[type="text"] {
+    width: 48px;
+    box-shadow: none;
+    height: 29px;
+}
+
+.public-content-tab .tfootTab td:nth-child(2) i {
+    padding-left: 22px;
+    padding: 13px 9px 9px 32px;
+    display: inline-block;
+    font-style: normal;
+}
+
+.public-content-tab .tfootTab td:nth-child(2) i .slabel {
+    display: block;
+}
+
+.public-content-tab .tfootTab td:nth-child(2) em {
+    font-style: normal;
+    color: #666666;
+}
+
+.public-content-tab td .pad {
+    margin-left: 20px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.public-content-tab td .del {
+    margin-left: 20px;
+    padding-top: 5px;
+    color: red;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.public-content-tab td .add {
+    margin-left: 20px;
+    padding-top: 5px;
+    cursor: pointer;
+    display: inline-block;
+    color: #00dd1c;
+}
+
+/*用label模拟的input */
+.public-content-tab td .labelinput {
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding-right: 10px;
+    width: 138px;
+    font-weight: normal;
+    height: 33px;
+    padding: 1px 0;
+    box-shadow: 0px 1px 1px rgba(198, 198, 198, 0.5) inset;
+    /*-webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);*/
+}
+
+.public-content-tab td .slabel {
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding-right: 10px;
+    width: 138px;
+    display: inline-block;
+    font-weight: normal;
+    height: 33px;
+    margin-top: 4px;
+    padding: 1px 0;
+    box-shadow: 0px 1px 1px rgba(198, 198, 198, 0.5) inset;
+}
+
+.public-content-tab td .slabel.isDisabled:before {
+    content: '';
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    width: 48px;
+}
+
+.public-content-tab td .slabel.isDisabled input {
+    display: none;
+}
+
+.public-content-tab td label input[type="text"] {
+    border-style: none;
+    width: 110px;
+    outline: none;
+    box-shadow: none;
+    height: 29px;
+}
+
+.changeMoney {
+
+}
+
+.changeMoney i {
+    font-style: normal;
+    display: none !important;
+    width: 110px;
+    height: 29px;
+    display: inline-block;
+}
+
+/*radio样式*/
+.public-content-tab tbody input[type="radio"] {
+    margin-right: 5px;
+}
+
+.public-content-tab tbody input[type="checkbox"] {
+    margin-right: 2px;
+}
+
+/*input跨3行的样式*/
+.public-content-tab tbody tr td[colspan="3"] input[type="text"] {
+    width: 340px;
+}
+
+/*PersonMess借款人信息 样式开始*/
+.public-content-title .shaixuan {
+    color: #29335C;
+}
+
+.public-content-tab thead tr td {
+    background-color: #F5F5F5 !important;
+    color: #333333 !important;
+}
+
+/*住宅类型样式*/
+.public-content-tab tbody tr .PersonCol3 {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.public-content-tab tbody tr .PersonCol3 input[type="checkbox"] {
+    margin-left: 15px;
+}
+
+.public-content-tab tbody tr .PersonCol3 input[type="radio"] {
+    margin-left: 15px;
+}
+
+.public-content-tab tbody tr .PersonCol3 input[type="text"] {
+    width: 40px !important;
+    height: 14px;
+    outline: none;
+    border-style: none;
+    border-bottom: 1px solid #C3C3C3;
+    padding-left: 0;
+    box-shadow: none;
+}
+
+/*房贷历史*/
+.public-carStory-tab {
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.public-carStory-tab tr, .public-carStory-tab thead, .public-carStory-tab tbody {
+    width: 100%;
+}
+
+.public-carStory-tab td {
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    height: 60px;
+}
+
+.public-carStory-tab thead td {
+    background-color: #E8EAF1;
+}
+
+.public-carStory-tab thead td:nth-child(1) {
+    width: 20%;
+}
+
+.public-carStory-tab thead td:nth-child(2) {
+    width: 15.2%;
+}
+
+.public-carStory-tab thead td:nth-child(6) {
+    width: 13.6%;
+}
+
+.public-carStory-tab thead td:nth-child(3),
+.public-carStory-tab thead td:nth-child(4),
+.public-carStory-tab thead td:nth-child(5) {
+    width: 17%;
+}
+
+.public-carStory-tab tbody td:nth-child(1) input {
+    width: 200px;
+}
+
+.public-carStory-tab tbody td:nth-child(2) input {
+    width: 140px;
+}
+
+.public-carStory-tab tbody td:nth-child(3) input {
+    width: 140px;
+}
+
+.public-carStory-tab tbody td:nth-child(4) input {
+    width: 140px;
+}
+
+.public-carStory-tab tbody td:nth-child(5) input {
+    width: 158px;
+}
+
+/*正常input样式*/
+.public-carStory-tab td input[type="text"] {
+    width: 110px;
+    height: 32px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #DDDDDD;
+}
+
+/*用label模拟的input */
+.public-carStory-tab td label {
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding-right: 10px;
+    width: 160px;
+    font-weight: normal;
+    box-shadow: 0px 1px 1px rgba(198, 198, 198, 0.5) inset;
+    overflow: hidden;
+    margin-bottom: 0;
+    height: 32px;
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+}
+
+.public-carStory-tab td label input[type="text"] {
+    border-style: none;
+    width: 120px;
+    outline: none;
+    box-shadow: none;
+    margin-top: 1px;
+    height: 29px;
+}
+
+.public-carStory-tab td label span i {
+    color: #999999;
+}
+
+.public-carStory-tab tfoot tr td {
+    position: relative;
+}
+
+.public-carStory-tab tfoot tr td[colspan="6"] div {
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -80px;
+    background: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    border-top: none;
+    line-height: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    color: #666666;
+}
+
+/*资料清单 样式开始*/
+.public-bgForm {
+    padding: 0 20px;
+    height: 55px;
+    position: relative;
+}
+
+/*左边*/
+.public-bgForm .public-formLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+}
+
+/*select input标签*/
+.public-bgForm .public-formLeft select, .public-bgForm .public-formLeft input {
+    border: 1px solid #DDDDDD;
+    width: 98px;
+    height: 33px;
+    color: #999999;
+    border-radius: 3px;
+    padding-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*独立input text*/
+.public-bgForm .public-formLeft input[type="text"] {
+    width: 128px;
+    left: 110px;
+}
+
+/*a标签模拟上传按钮*/
+.public-formLeft a {
+    min-width: 68px;
+    height: 33px;
+    border: 1px solid #DDDDDD;
+    color: #999999;
+    border-radius: 3px;
+    position: absolute;
+    display: inline-block;
+    left: 110px;
+    /*left:0;*/
+    text-align: center;
+    line-height: 31px;
+}
+
+.public-formLeft a span {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    color: #999999;
+}
+
+/*button 提交按钮*/
+.public-formLeft button {
+    min-width: 68px;
+    height: 33px;
+    background: #29335C;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 190px;
+    /*left: 80px;*/
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    padding: 0;
+}
+
+.public-formLeft .disNone {
+    left: 0;
+}
+
+.public-formLeft .weiMess1 {
+    position: absolute;
+    top: 5px;
+    left: 270px;
+    /*left: 160px;*/
+}
+
+.weiMess1 i {
+    font-size: 20px;
+    background: #ffffff;
+    color: #F7B733;
+    cursor: pointer;
+}
+
+.weiMess1:hover .hezi0 {
+    display: block;
+}
+
+.weiMess1 .hezi0 {
+    position: absolute;
+    bottom: -40px;
+    right: -250px;
+    opacity: 0.6;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    background: black;
+    min-width: 287px;
+    height: 30px;
+    border-radius: 5px;
+    line-height: 30px;
+    padding-left: 10px;
+    display: none;
+}
+
+.weiMess1 .hezi0 span {
+    color: #ffffff;
+}
+
+.weiMess1 .hezi0 .hezi1 {
+    position: absolute;
+    top: -18px;
+    right: 250px;
+    width: 0px;
+    height: 0px;
+    border-width: 10px;
+    border-color: transparent transparent black transparent;
+    border-style: solid;
+}
+
+/*右边*/
+.public-bgForm .public-formRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 35px;
+}
+
+.public-formRight button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    border-radius: 3px;
+    background: #E55A5B;
+    width: 32px;
+    height: 32px;
+}
+
+.public-formRight button i {
+    color: #FFFFFF;
+}
+
+.public-formRight input[type="text"] {
+    padding-left: 10px;
+    border: 1px solid #DDDDDD;
+    width: 188px;
+    height: 33px;
+    border-radius: 3px;
+    color: #999999;
+    position: absolute;
+    right: 45px;
+    top: 0;
+}
+
+.public-formRight select {
+    position: absolute;
+    top: 0;
+    right: 45px;
+    height: 32px;
+    width: 98px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #DDDDDD;
+    color: #999999;
+}
+
+.public-formRight .cho {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 155px;
+    color: #666666;
+    height: 32px;
+    line-height: 32px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.public-formRight .cho span {
+    color: #E55A5B;
+    padding: 0 5px;
+}
+
+/*资料清单tabel*/
+.dataListTab {
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 100%;
+}
+
+.dataListTab tr td {
+    color: #666666;
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    height: 58px;
+}
+
+.dataListTab tr {
+    width: 100%;
+}
+
+.dataListTab thead tr td {
+    background-color: #E8EAF1;
+}
+
+.dataListTab tr td:nth-child(1) {
+    /*width: 10%!important;*/
+}
+
+.dataListTab tr td:nth-child(2) {
+    /*min-width: 24.5%!important;*/
+}
+
+.dataListTab tr td:nth-child(3) {
+    /*width: 10%!important;*/
+}
+
+/*.dataListTab tr td:nth-child(4){
+    width: 15.2%!important;
+}*/
+.dataListTab tr td:nth-child(3) i {
+    cursor: pointer;
+}
+
+.D-loan-table tr td:nth-child(2) {
+    padding: 0 3px;
+    width: 15% !important;
+}
+
+.D-loan-table tr td:nth-child(3) {
+    min-width: 52%;
+    padding: 0px 2px;
+}
+
+.D-loan-table tr td:nth-child(7) {
+    padding: 0 3px;
+    width: 15% !important;
+}
+
+.D-loan-table tr td:last-child {
+    cursor: pointer;
+    padding: 0 6px;
+}
+
+.minImg {
+    text-align: left !important;
+}
+
+.minImg > div > li {
+    display: inline-block;
+    width: 60px !important;
+    height: 40px !important;
+    margin: 5px 10px;
+    border: 2px solid #dddddd;
+    border-radius: 3px;
+    position: relative;
+
+}
+
+.minImg > div > li img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 3px;
+}
+
+.minImg > div > li i {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    color: #fd5959;
+    font-size: 12px;
+}
+
+/*底部提交按钮样式*/
+.public-bgBotBtn {
+    position: fixed;
+    bottom: 0;
+    left: calc(10% + 20px);
+    right: 37px;
+    padding: 10px 0;
+    background-color: #E8EAF1;
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    z-index: 1000;
+}
+
+.public-bgBotBtn button {
+    width: 98px;
+    height: 38px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.public-bgBotBtn button:nth-child(1) {
+    background-color: #E55A5B !important;
+    color: #FFFFFF;
+    border: 1px solid #E55A5B;
+}
+
+.public-bgBotBtn button:nth-child(2) {
+    background-color: #FFFFFF;
+    color: #666666;
+    border: 1px solid #DDDDDD;
+}
+
+._btn {
+    height: 38px;
+    display: inline-block;
+    border-radius: 3px;
+    line-height: 36px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+._btn:hover {
+    background-color: #E55A5B
+}
+
+._btn-size {
+    background-color: #E55A5B;
+    color: #fff;
+    border: 1px solid #DDD;
+}
+
+.sex-radio {
+    margin-left: -5px;
+    position: relative;
+    display: inline-block;
+    padding: 3px 10px;
+    border: 1px solid #dadada;
+    color: #666;
+    cursor: pointer;
+}
+
+.sex-radio.is-checked {
+    background-color: #e55a5b;
+    border: 1px solid #e55a5b;
+    color: #fff;
+}
+
+.sex-radio input {
+    position: absolute;
+    /*opacity: 0;*/
+    display: none;
+}
+
+._result {
+    padding: 10px 0px 7px
+}
+
+label {
+    margin-left: 0px;
+    font-style: normal !important;
+}
+
+._result label input {
+    margin-right: 4px;
+}
+
+.imgArr {
+
+}
+
+.simulate-textarea {
+    display: inline-block;
+    width: 550px;
+    border: 1px solid #ddd;
+    height: 400px;
+    outline: 0;
+    padding: 5px 10px;
+    line-height: 30px;
+}
+
+._content {
+    border: 1px solid #ddd;
+    outline: 0;
+    width: 560px;
+    height: 200px;
+    line-height: 30px;
+    padding: 5px 10px;
+}
+
+/*.minImg a img.load{
+	width: 18px!important;
+    height: 18px!important;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -9px;
+    margin-top: -23px;
+}*/
+[id^="gallery"]{
+    position: relative;
+    left: 0;
+    transition: left .3s ease-in-out;
+}
+[id^="gallery"] li {
+    display: inline-block;
+    width: 60px !important;
+    height: 40px !important;
+    margin: 5px 10px;
+    border: 2px solid #dddddd;
+    border-radius: 3px;
+    position: relative;
+}
+[id^="gallery"] li img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 3px;
+}
+[id^="gallery"] li i{
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    color: #fd5959;
+    font-size: 12px;
+}
+
+.more{
+    transition: transform .3s ease-in-out;
+    width: 22px;
+    height: 22px;
+    position: relative;
+    top: 7px;
+    display: inline-block;
+}
+
+.load {
+    position: relative;
+    padding: 10px 14px;
+}
+
+.imgorder-loading {
+    background: url('../../images/imgload.png') center center no-repeat !important;
+}
+
+/*自己写的样式*/
+#person_list input[type='checkbox'] {
+    height: 36px;
+}
+#fee_list input[type='checkbox']{
+    height: 36px;
+}
+#loanMethod_list input[type='checkbox']{
+    height: 36px;
+}
+.require {
+    color: #d5342d;
+}
+
