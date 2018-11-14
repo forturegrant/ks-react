@@ -50,6 +50,16 @@ class login extends Component {
         //return false;
     }
 
+    timer() {
+        return new Promise(function(){
+
+        })
+    }
+
+
+
+
+
     logIn() {
         this.props.dispatch(fetchLogin({
             username: this.state.username,
