@@ -21,29 +21,52 @@ class orderIn extends Component {
         this.props.dispatch(fetchGetPCA({parentId: value}, 'getArea'))
     }
 
+    handleBlur(e) {
+        let birthDate = e.target.value;
+        //console.log(this.birthDateInput)
+        //this.birthDateInput.focus()
+        this.props.form.setFieldsValue({
+            birthDate: birthDate.substring(6, 10) + '-' + birthDate.substring(10, 12) + '-' + birthDate.substring(12, 14)
+        })
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             console.log(values)
+            const {realName, idCard, birthDate, cellphone, sex, residProvince, residCity, residArea, residence, addrProvince} = values;
             const data = {
+                loan_number: 'FD20181114112724656',
+                product_id: this.props.location.state.product_id,
+                apply_money: '20000',
+                at_id: 6,
+                lt_id: 21,
+                repayment_way: 4,
+                interest: 2,
+                loan_way: 6,
+                os_id: 9,
+                feeInfos: {
+                    fee_id: 1,
+                    fee: 200
+                },
                 personalInfos: {
                     borrowers: {
-                        realName: values.realName,
-                        idCard: values.idCard,
-                        birthDate: values.birthDate,
-                        cellphone: values.cellphone,
-                        sex: values.sex
+                        realName,
+                        idCard,
+                        birthDate,
+                        cellphone,
+                        sex
                     }, perInfo: {
-                        residProvince: values.residProvince,
-                        residCity: values.residCity,
-                        residArea: values.residArea,
-                        residence: values.residence,
-                        addrProvince: values.addrProvince,
+                        residProvince,
+                        residCity,
+                        residArea,
+                        residence,
+                        addrProvince,
                     }
                 }
             }
             if (!err) {
-                this.props.dispatch(fetchSaveOrder({frontData:JSON.stringify(data)}));
+                this.props.dispatch(fetchSaveOrder({frontData: JSON.stringify(data)}));
             }
         });
     }
@@ -122,7 +145,7 @@ class orderIn extends Component {
                         }],
                     })(
                         <Input type="text" style={{width: '220px'}} autoComplete="off" placeholder="输入身份证号码"
-                               className="idCard"/>
+                               className="idCard" onBlur={this.handleBlur.bind(this)}/>
                     )}
                                                                 </FormItem>
         </span>
@@ -130,7 +153,7 @@ class orderIn extends Component {
                                             <label className="labelinput pad">
                                                 {getFieldDecorator('birthDate', {
 
-                                                    rules: [{required: true, message: '请输入生日',}],
+                                                    rules: [{required: true, message: '请输入生日',}]
                                                 })(
                                                     <Input type="text" autoComplete="off" placeholder="请输入生日"
                                                            className="birthDate"/>
@@ -457,6 +480,10 @@ class orderIn extends Component {
                 </Form>
             </div>
         )
+    }
+
+    componentDidMount() {
+        console.log(this.props.location.state.product_id);
     }
 }
 

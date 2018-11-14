@@ -50,7 +50,7 @@ class productOrderIn extends Component {
                         ))
                     }
                 </div>
-                <div className="next"><Link to={{pathname: `orderIn`, state: {type: this.state.id}}}
+                <div className="next"><Link to={{pathname: `orderIn`, state: {product_id: this.state.id}}}
                                             className="D-a">下一步</Link></div>
             </div>
         )

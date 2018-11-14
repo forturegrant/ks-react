@@ -43,4 +43,4 @@ export default (() => {
 
 export const prefix = global.gconfig.linkUrl
 export const suffix = '.json'
-export const timeout = 6000
+export const timeout = 12000

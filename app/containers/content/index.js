@@ -59,7 +59,7 @@ export default class Content extends Component {
                                         (<li key={index} /*className={`index ${this.state.bgColor === index ? "actives" : ""}`}*/
                                              onClick={this.changeBgColor.bind(this, index)}>
                                             <NavLink className="js-menu-item" activeClassName="actives"
-                                                  to={`${url}/${item.menuUrl}`}>{item.menuName}</NavLink>
+                                                  to={`${url}/${item.menuUrl}`} replace>{item.menuName}</NavLink>
                                         </li>)
                                     )
                                 }

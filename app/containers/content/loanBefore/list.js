@@ -91,7 +91,7 @@ class List extends Component {
                     <div style={{height: '20px'}}></div>
                     {/*<!--tabel 列表-->*/}
                     <div className="table-box table-box-hidden">
-                        <div className="table-scroll-content">
+                        <div className="table-scroll">
                             <table className="table public-table PoInput">
                                 <thead>
                                 <tr>
@@ -100,6 +100,7 @@ class List extends Component {
                                     {/*<!-- end ngIf: !operation.examine -->*/}
                                     <td>创单时间</td>
                                     <td>借款编号</td>
+                                    <td>产品</td>
                                     <td>客户姓名</td>
                                     <td>期限</td>
                                     <td>借款金额</td>
@@ -121,6 +122,7 @@ class List extends Component {
                                         <td>{item.personal_name}</td>
                                         <td>{item.term_name}</td>
                                         <td>{item.apply_money}</td>
+                                        <td>{item.user_name}</td>
                                         <td>{item.user_name}</td>
                                         <td>{item.s_name}</td>
                                         <td>
@@ -149,10 +151,10 @@ class List extends Component {
                                 &nbsp;全选
                             </label>
                             <div className="se-re">
-                                <select className="tabHint PoListSele">
-                                    <option value="-1" selected="selected">批量操作</option>
+                                <select className="tabHint PoListSele" defaultValue={-1}>
+                                    <option value={-1}>批量操作</option>
                                     {/*<!-- ngIf: HbHr.hr57 && operation._type =='orderList' -->*/}
-                                    <option value="1">删除所选</option>
+                                    <option value={1}>删除所选</option>
                                     {/*<!-- end ngIf: HbHr.hr57 && operation._type =='orderList' -->*/}
                                     {/*<!-- ngIf: operation._type !=='orderList' -->*/}
                                 </select>
