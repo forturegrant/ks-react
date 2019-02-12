@@ -10,7 +10,6 @@ export function getCodeAction(img,token) {
     }
 }
 
-
 export function getCode(state = initialState, action) {
     switch (action.type) {
         case "getCode":

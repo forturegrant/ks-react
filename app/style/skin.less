@@ -72,53 +72,60 @@
 
 /* =================顶部导航样式================== */
 /*首页导航*/
-.nav-bg{
+.nav-bg {
   background: @nav-color;
   height: 66px;
   border-bottom: 2px solid @nav-bot-border;
   display: none;
   position: absolute;
-  top:-66px;
-  left:0;
-  right:0;
+  top: -66px;
+  left: 0;
+  right: 0;
 }
+
 /*导航高亮*/
-.actives{
+.actives {
   background-color: @nav-actives;
 }
 
-.nav-center #nav-parent li:hover{
+.nav-center #nav-parent li:hover {
   /*cursor: hand;*/
   background: @nav-actives;
 }
+
 /*导航左边title样式*/
-.nav-left{
+.nav-left {
   width: 330px;
   padding: 16px 0 16px 20px;
 }
-.nav-left-icon{
+
+.nav-left-icon {
   width: 39px;
   height: 34px;
-  background:url('../images/nav0.png') no-repeat center;
+  background: url('../images/nav0.png') no-repeat center;
 }
-.nav-left-title{
+
+.nav-left-title {
   font-size: 24px;
   padding: 0px 15px 0 15px;
   color: @nav-font-color;
 }
-.nav-left-bor{
+
+.nav-left-bor {
   width: 1px;
   height: 20px;
   background: url('../images/nav1.jpg') no-repeat center;
   margin: 7px 0 0 0;
 }
+
 /* 顶部导航栏字体颜色 左 */
-.nav-left-name{
+.nav-left-name {
   color: @nav-font-color;
   padding: 7px 0 0 15px;
 }
+
 /* 顶部导航栏字体颜色 中 */
-.nav-center #nav-parent li a{
+.nav-center #nav-parent li a {
   text-decoration: none;
   color: @nav-font-color;
   height: 66px;
@@ -126,14 +133,17 @@
   padding: 0 22px;
   font-size: 16px;
 }
+
 /* 导航栏右-字体颜色 */
-.D-a{
-  color: @nav-font-color!important;
+.D-a {
+  color: @nav-font-color !important;
 }
-.D-a:hover{
+
+.D-a:hover {
   color: @nav-font-color;
 }
-.nav-right>ul>li{
+
+.nav-right > ul > li {
   float: left;
   display: inline-block;
   text-align: center;
@@ -144,11 +154,12 @@
   height: 66px;
   line-height: 66px;
 }
+
 /* =================顶部导航样式-end================== */
 
 /* =================左侧菜单样式================== */
 /* 左侧导航栏背景色 */
-.temleft{
+.temleft {
   float: left;
   height: 100%;
   width: 10%;
@@ -156,8 +167,9 @@
   background-color: @left-nav-backcolor;
   /*background: red;*/
 }
+
 /* 左侧导航栏字体颜色 */
-.temList > li{
+.temList > li {
   text-align: center;
   color: @left-nav-fontcolor;
   text-decoration: none;
@@ -167,17 +179,20 @@
   border-bottom: 1px solid @left-nav-topborder;
   border-top: 1px solid @left-nav-bottom;
 }
+
 /*左侧导航栏 触摸时的颜色*/
-.temList li:hover{
+.temList li:hover {
   background: @left-nav-hover;
 }
+
 /* 高亮颜色 */
-.light{
+.light {
   position: relative;
   background: @left-nav-light;
 }
+
 /*redCir小圆点的颜色*/
-.light .redCir{
+.light .redCir {
   width: 10px;
   height: 10px;
   background: @left-nav-redCir;
@@ -186,25 +201,28 @@
   border-radius: 5px;
   left: 20px;
 }
+
 /* =================左侧菜单样式-end================== */
 
 /* ======搜索按钮颜色=======*/
-.public-bgDate button{
-  border:none;
+.public-bgDate button {
+  border: none;
   background-color: @content-search-btn;
   width: 35px;
   height: 35px;
   border-radius: 3px;
   margin-right: 5px;
 }
-.public-bgDate button i{
+
+.public-bgDate button i {
   color: @content-search-icon;
 }
+
 /* ======搜索按钮颜色-end=======*/
 
 /* =================右下角消息提示样式================== */
 /*右下角消息提示球的颜色*/
-.no-show{
+.no-show {
   width: 60px;
   height: 60px;
   background: @cont-ball-backcolor;
@@ -218,13 +236,15 @@
   z-index: 1000;
   cursor: pointer;
 }
-.no-show i{
-  font-size: 25px!important;
+
+.no-show i {
+  font-size: 25px !important;
   color: @cont-ball-iconcolor;
 }
+
 /* 消息栏展开之后的样式 */
-.red-messg{
-  width:100%;
+.red-messg {
+  width: 100%;
   height: 60px;
   background: @cont-hint-backcolor;
   color: @cont-hint-fontcolor;
@@ -232,125 +252,145 @@
   line-height: 60px;
   position: relative;
 }
+
 /*消息栏展- 内容区底边线条颜色 */
-.li-messg{
+.li-messg {
   width: 100%;
   line-height: 60px;
   border-bottom: 1px solid @cont-hint-bottom;
   padding-left: 7px;
 }
+
 /*消息栏展- 内容区左边icon颜色 */
-.li-messg .iconfont{
+.li-messg .iconfont {
   width: 32px;
   height: 32px;
   display: inline-block;
   background: @cont-hintnews-iconback;
   border-radius: 50%;
   color: @cont-hintnews-iconcolor;
-  font-size: 18px!important;
+  font-size: 18px !important;
   text-align: center;
   line-height: 32px;
 }
+
 /* =================左下角消息提示样式-end================== */
 
 /* =================中间内容区-可以跳转页面的按钮-样式================== */
 /*内容区-您的位置颜色样式*/
-.public-top{
+.public-top {
   height: 35px;
   color: @cont-jump-color;
   background: @cont-jump-backcolor;
   padding: 7px 0 0 20px;
 }
-.public-top i{
+
+.public-top i {
   font-size: 14px;
   color: #999999;
 }
+
 /*中间内容列表*/
-.public-bgContent{
-  padding:0 20px;
+.public-bgContent {
+  padding: 0 20px;
 }
-.public-bgListNav{
+
+.public-bgListNav {
   padding: 12px 0;
   border-bottom: 1px solid #EDEDED;
 }
-.public-bgListNav .public-input{
+
+.public-bgListNav .public-input {
   font-size: 18px;
-  color:#000000;
+  color: #000000;
 }
-.public-bgListNav .public-List{
+
+.public-bgListNav .public-List {
   font-size: 12px;
-  color:@cont-jump-color;
-  margin:0 5px;
+  color: @cont-jump-color;
+  margin: 0 5px;
   padding: 7px 10px;
   border-radius: 5px;
 }
-.public-bgListNav .public-List:hover{
+
+.public-bgListNav .public-List:hover {
   background: @cont-jump-hover;
   color: @cont-jump-hovercolor;
-  cursor:pointer;
+  cursor: pointer;
 }
-.publicListHover{
+
+.publicListHover {
   background: @cont-jump-hover;
-  color:@cont-jump-hovercolor !important;
-  cursor:pointer;
+  color: @cont-jump-hovercolor !important;
+  cursor: pointer;
 }
+
 /* =================中间内容区-可以跳转页面的按钮-样式-end================== */
 
 /* ===================下拉框和input框公共颜色===============*/
 /*select::-ms-expand {display: none; }*/
-select:not(.tabHint):active{
-  background-color:@not-tabHint-backcolor!important ;
-  border: 1px solid @not-tabHint-border!important;
-  color: @not-tabHint-color!important;
+select:not(.tabHint):active {
+  background-color: @not-tabHint-backcolor !important;
+  border: 1px solid @not-tabHint-border !important;
+  color: @not-tabHint-color !important;
 }
-select.tabHint{
+
+select.tabHint {
   /*background: url("../images/barrow_07.png") no-repeat scroll right center transparent!important;*/
-  background-color:@tabHint-backcolor!important;
+  background-color: @tabHint-backcolor !important;
   font-size: 12px;
   padding-left: 3px;
-  width: 70px;  
+  width: 70px;
 }
-select option{
-  background: white;  
+
+select option {
+  background: white;
   color: #999999;
 }
-input::-webkit-input-placeholder{
+
+input::-webkit-input-placeholder {
   color: #999999;
 }
-input::-moz-placeholder{
+
+input::-moz-placeholder {
   color: #999999;
 }
-input::-ms-input-placeholder{
+
+input::-ms-input-placeholder {
   color: #999999;
 }
-.sel-blue select option{
-  background-color: #29335c\9\0;  
-  color: white\9\0;
+
+.sel-blue select option {
+  background-color: #29335c\9 \0;
+  color: white\9 \0;
 }
+
 /* ===================下拉框和input框公共颜色-end===============*/
 
 /* =================表格内共通样式-================== */
 
 /* 列表内合同编号高亮的颜色 */
-.yellowBg>span{
-  background:@pact-item-backcolor;
-  padding:3px 15px;
+.yellowBg > span {
+  background: @pact-item-backcolor;
+  padding: 3px 15px;
   color: @pact-item-color;
 }
+
 /* 操作记录按钮颜色 */
-.public-table button{
+.public-table button {
   background-color: @table-btncolor;
 }
+
 /* =================表格内共通样式-end================== */
 
 /* =========底部分页颜色样式=========== */
 .footerLeft > span,
 .footerLeft > i,
-.footerLeft > ul > li{
+.footerLeft > ul > li {
   float: left;
   height: 30px;
   width: 30px;
-  border:1px solid @paging-border-color;
+  border: 1px solid @paging-border-color;
   line-height: 30px;
   text-align: center;
   color: @paging-color;
@@ -359,22 +399,26 @@ input::-ms-input-placeholder{
   border-radius: 3px;
   cursor: pointer;
 }
-.footerLeft > span{
+
+.footerLeft > span {
   width: 40px;
   /*display: none;*/
 }
-.footerLeft > i{
+
+.footerLeft > i {
   font-style: normal;
   width: 54px;
   /*display: none;*/
 }
-.pageClass{
-  border:1px solid @paging-hover-color !important;
+
+.pageClass {
+  border: 1px solid @paging-hover-color !important;
   color: @paging-hover-color !important;
 }
 
-.footerLeft > ul >li:hover,.footerLeft > span:hover,.footerLeft > i:hover{
-  border:1px solid @paging-hover-color !important;
+.footerLeft > ul > li:hover, .footerLeft > span:hover, .footerLeft > i:hover {
+  border: 1px solid @paging-hover-color !important;
   color: @paging-hover-color !important;
 }
+
 /* =========底部分页颜色样式-end=========== */

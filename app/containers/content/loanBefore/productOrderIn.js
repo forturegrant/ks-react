@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {Tabs} from 'antd';
-import './product_orderIn.css'
+import {Modal} from 'antd';
+import './product_orderIn.less'
 import {fetchGetProductList} from "../../../actions/common";
 
 class productOrderIn extends Component {

@@ -22,7 +22,6 @@ class registerForm extends Component {
                 this.props.dispatch(fetchRegister(startRegister, values, (res) => {
                     message.success(res.msg)
                 },endRegister))
-
                 /*this.props.dispatch(fetchRegister(values, (res) => {
                     // console.log(res)
                     message.success(res.msg)

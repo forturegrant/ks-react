@@ -9,7 +9,7 @@ const axiosBaseConfig = {
     baseURL: prefix,
     timeout: timeout,
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    method: 'post',
+    /*method: 'post',*/
     // 跨域请求，是否带上认证信息
     withCredentials: true, // default
     // http返回的数据类型

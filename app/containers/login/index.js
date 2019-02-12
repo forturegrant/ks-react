@@ -46,32 +46,23 @@ class login extends Component {
     }
 
     getCode() {
-        this.props.dispatch(fetchGetCode(getCodeAction))
+        this.props.fetchGetCode(getCodeAction)
         //return false;
     }
 
-    timer() {
-        return new Promise(function(){
-
-        })
-    }
-
-
-
-
 
     logIn() {
-        this.props.dispatch(fetchLogin({
+        this.props.fetchLogin({
             username: this.state.username,
             password: this.state.password,
             changeCode: this.state.changeCode,
             token: this.props.getCode.token,
             type: 1
-        }))
+        })
     }
 
     componentWillMount() {
-        this.props.dispatch(fetchGetCode(getCodeAction))
+        this.props.fetchGetCode(getCodeAction)
     }
 
     render() {
@@ -116,7 +107,7 @@ class login extends Component {
                                                        placeholder="验证码" onChange={this.getImgCode}/>
                                                 <span
                                                     className="btn btn-default logIn-height logIn-Code logIn-defaultCheckCode getCode"
-                                                    onClick={this.getCode}>
+                                                        onClick={this.getCode}>
                                                     <img className="logIncodeImg codeImg" src={img}/>
                                                 </span>
                                                 <span id="login-btn"
@@ -149,16 +140,12 @@ class login extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-    logined: state.login.login,
-    getCode: state.login.getCode
-})
-
-const mapDispatchToProps = (dispatch) => ({
-    dispatch: dispatch
-})
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+    (state,ownProps) => ({
+        logined: state.login.login,
+        getCode: state.login.getCode
+    }),{
+        fetchGetCode,fetchLogin
+    }
 )(login)

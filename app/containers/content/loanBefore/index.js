@@ -81,16 +81,15 @@ export default class LoanBefore extends Component {
                             <div className="public-bgContent">
                                 <div className="public-bgListNav">
                                     <span className="public-input">订单录入</span>
-                                    {/*<!-- ngIf: HbHr.hr54 -->*/}<span
-                                    className="public-List publicListHover">已录列表</span>{/*<!-- end ngIf: HbHr.hr54 -->*/}
+                                    {/*<!-- ngIf: HbHr.hr54 -->*/}<span className="public-List publicListHover">已录列表</span>{/*<!-- end ngIf: HbHr.hr54 -->*/}
                                     <span className="public-List">客户列表</span>
                                 </div>
                             </div>
                             {/*<!--滚动div   -->*/}
                             <Switch>
-                                <Route exact path={`${url}/`} component={List}/>
-                                <Route path={`${url}/productOrderIn`} component={ProductOrderIn}/>
-                                <Route path={`${url}/orderIn`} component={OrderIn}/>
+                                <Route exact path={`${url}/`} component={List} />
+                                <Route path={`${url}/productOrderIn`} component={ProductOrderIn} />
+                                <Route path={`${url}/orderIn`} component={OrderIn} />
                             </Switch>
                         </div>
                     </div>

@@ -4,6 +4,8 @@ import { Tabs } from 'antd';
 import {
     Link
 } from 'react-router-dom'
+import RoamTaskWinBox from './common/roamTaskWinBox'
+
 import {fetchGetList} from "../../../actions/common";
 
 
@@ -11,13 +13,25 @@ class List extends Component {
     constructor(props) {
         super(props)
         //this.changeBgColor = this.changeBgColor.bind(this);
+        this.state = {
+            roamTask: false
+        }
+    }
+
+    handleChange(e){
+        if(e.target.value === 'reviewOrder'){
+            this.setState({
+                roamTask: true
+            })
+        }
     }
 
     render(){
         const {list} = this.props;
         const {url} = this.props.match;
         return(
-            <div className="bgSortScroll">
+            <div>
+                <div className="bgSortScroll">
                 {/*<!-- ngIf: HbHr.hr54 -->*/}
                 <div className="public-bgContent">
                     {/*<!--表单搜索-->*/}
@@ -28,10 +42,10 @@ class List extends Component {
                         <span><input type="text" id="PoInput-toDate" placeholder="结束时间"/><i
                             className="iconfont icon-riqi"></i></span>
                         <div className="se-re">
-                            <select id="seleNames">
-                                <option value="" selected="selected">选择字段</option>
+                            <select id="seleNames" defaultValue={-1}>
+                                <option value="-1" >选择字段</option>
                                 <option value="1">借款编号</option>
-                                <option value="2">客户姓名</option>
+                                <option value={2}>客户姓名</option>
                                 <option value="5">手机号码</option>
                                 <option value="3">身份证号码</option>
                                 <option value="4">业务员姓名</option>
@@ -42,9 +56,9 @@ class List extends Component {
 			<input type="text" id="inputNames" placeholder="请输入关键字"/>
 		</span>
                         <div className="se-re">
-                            <select>
-                                <option value="" className="" selected="selected">分期</option>
-                                <option label="1个月" value="number:6">1个月</option>
+                            <select defaultValue={-1}>
+                                <option value="-1">分期</option>
+                                <option label="1个月" value="1">1个月</option>
                                 <option label="2个月" value="number:7">2个月</option>
                                 <option label="3个月" value="number:8">3个月</option>
                                 <option label="4个月" value="number:38">4个月</option>
@@ -62,8 +76,8 @@ class List extends Component {
                             <span className="se-po"></span>
                         </div>
                         <div className="se-re">
-                            <select>
-                                <option value="" selected="selected">贷款方式</option>
+                            <select defaultValue={-1}>
+                                <option value="-1">贷款方式</option>
                                 <option value="1">按揭短拆</option>
                                 <option value="2">红本抵押</option>
                                 <option value="3">红本质押</option>
@@ -78,7 +92,7 @@ class List extends Component {
                     <div className="public-bghint">
                                         <span style={{cursor: 'pointer'}}>提示操作&nbsp;&nbsp;<i
                                             className="iconfont icon-icon-copy-copy"></i></span>
-                        <span className="calNum">筛选<span>364</span>条结果</span>
+                        <span className="calNum">筛选<span></span>条结果</span>
                     </div>
                     <ul className="public-ulList">
                         <menu-content>
@@ -112,9 +126,9 @@ class List extends Component {
                                 </thead>
                                 <tbody>
                                 {list.map((item, index) => (
-                                    <tr className="table-tr-hover ">
+                                    <tr className="table-tr-hover" key={index}>
                                         <td>
-                                            <input type="checkbox" name="ch_id" value="{{id}}"/>
+                                            <input type="checkbox" name="ch_id" value={item.id} />
                                         </td>
                                         <td>{item.found_time}</td>
                                         <td>{/*{{#IF_GT before_s_id node_id}}<span style="background: #e55a5b; padding: 3px 15px; color: #fff;">{{loan_number}}</span>{{else}}{{loan_number}}{{/IF_GT}}*/}</td>
@@ -123,13 +137,18 @@ class List extends Component {
                                         <td>{item.term_name}</td>
                                         <td>{item.apply_money}</td>
                                         <td>{item.user_name}</td>
-                                        <td>{item.user_name}</td>
+                                        <td>
+                                            {item.d_name3 ? `<span></span>${item.d_name3}`: ''}
+                                            {item.d_name2 ? item.d_name2: ''}
+                                            {item.d_name ? item.d_name: ''}
+                                        </td>
                                         <td>{item.s_name}</td>
                                         <td>
                                             <div className="se-re sel-blue">
                                                 <select
-                                                    className="tabHint">
-                                                    <option></option>
+                                                    className="tabHint" onChange={this.handleChange.bind(this)} defaultValue="-1">
+                                                    <option value="-1">选择操作</option>
+                                                    <option value="reviewOrder">马上流转</option>
                                                 </select>
                                                 <span className="se-po-blue"></span>
                                             </div>
@@ -167,8 +186,11 @@ class List extends Component {
                         </div>
                     </div>
                 </div>
+
             </div>
-        )
+                <RoamTaskWinBox roamTask={this.state.roamTask} />
+            </div>
+    )
     }
 
     componentDidMount() {
