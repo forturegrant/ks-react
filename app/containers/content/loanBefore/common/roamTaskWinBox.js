@@ -15,9 +15,8 @@ class roamTaskWinBox extends Component {
                             <div className="dealrecord">
                                 <div className="headerBox">
                                     <span className="headerSpan">角色审批</span>
-                                    <i className="iconfont icon-wrong headerIcon" id="show"></i>
+                                    <i className="iconfont icon-wrong headerIcon" id="show" onClick={() => this.props.changeRoamTask()}></i>
                                 </div>
-
 
                                 <div className="resultBox">
                                     <div className="centerBox" style={{maxHeight: '600px', overflowY: 'auto'}}>
@@ -28,26 +27,22 @@ class roamTaskWinBox extends Component {
                                                 <tr className="esa">
                                                     <td><span style={{color: '#FF0404'}}>*</span>审核结果：</td>
                                                     <td>
-                                                        <label><input type="radio" name="faceResult" value="1"
-                                                                      className="ng-pristine ng-untouched ng-valid ng-empty" />审核通过</label>
-                                                        <label><input type="radio" name="faceResult" value="2"
-                                                                      className="ng-pristine ng-untouched ng-valid ng-empty" />拒绝审核</label>
+                                                        <label><input type="radio" name="faceResult" value="1" />审核通过</label>
+                                                        <label><input type="radio" name="faceResult" value="2" />拒绝审核</label>
                                                     </td>
                                                 </tr>
-
-                                                {/*<script type="text/x-handlebars-template" id="role_list_tpl">
-                                                    {{#if admins.[0]}}
+                                                    {/*{{#if admins.[0]}}*/}
                                                     <tr className="role">
                                                         <td><span style={{color: '#D5332C'}}>*</span>请选对象</td>
                                                         <td className="tdSelect">
                                                             <div className="se-re">
                                                                 <select id="role_select">
                                                                     <option value="">请选择{{role_name}}</option>
-                                                                    {{#each admins}}
-                                                                    {{#if realName}}
+                                                                    {/*{{#each admins}}
+                                                                    {{#if realName}}*/}
                                                                     <option value="{{id}}">{{realName}}</option>
-                                                                    {{/if}}
-                                                                    {{/each }}
+                                                                    {/*{{/if}}
+                                                                    {{/each }}*/}
                                                                 </select>
                                                             </div>
                                                         </td>
@@ -58,25 +53,24 @@ class roamTaskWinBox extends Component {
 
                                                         </td>
                                                     </tr>
-                                                    {{else}}
+                                                    {/*{{else}}*/}
                                                     <tr className="role">
                                                         <td><span style={{color: '#D5332C'}}>*</span>请选对象</td>
                                                         <td className="tdSelect">
                                                             <div className="se-re">
                                                                 <select id="role_select">
                                                                     <option value="">无</option>
-                                                                    {{#each admins}}
-                                                                    {{#if realName}}
+                                                                    {/*{{#each admins}}
+                                                                    {{#if realName}}*/}
                                                                     <option value="{{id}}">{{realName}}</option>
-                                                                    {{/if}}
-                                                                    {{/each }}
+                                                                    {/*{{/if}}
+                                                                    {{/each }}*/}
                                                                 </select>
                                                                 当前无审批人员，请联系管理员进行创建！
                                                             </div>
                                                         </td>
                                                     </tr>
-                                                    {{/if}}
-                                                </script>*/}
+                                                    {/*{{/if}}*/}
                                                 </tbody>
                                             </table>
                                             <div className="deleFooter">
@@ -98,15 +92,8 @@ class roamTaskWinBox extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-
-})
-
-const mapDispatchToProps = (dispatch) => ({
-
-})
-
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+    (state, ownProps) => ({
+        content: state.LoanBefore.content
+    })
 )(roamTaskWinBox)

@@ -8,14 +8,22 @@ import {
 import List from './list'
 import ProductOrderIn from './productOrderIn'
 import OrderIn from './orderIn.js'
+import RoamTaskWinBox from './common/roamTaskWinBox'
+/*import {fetchQueryNodeFromInfoAllByONid} from '../../../actions/common';*/
 
 export default class LoanBefore extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            bgColor: 0
+            bgColor: 0,
+            roamTask: false
         }
-        //this.changeBgColor = this.changeBgColor.bind(this);
+    }
+
+    changeRoamTask(){
+        this.setState({
+            roamTask: !this.state.roamTask
+        })
     }
 
     render() {
@@ -87,10 +95,12 @@ export default class LoanBefore extends Component {
                             </div>
                             {/*<!--滚动div   -->*/}
                             <Switch>
-                                <Route exact path={`${url}/`} component={List} />
+                                <Route exact path={`${url}/`} render={props=><List {...props} changeRoamTask={this.changeRoamTask.bind(this)}/>}/>
                                 <Route path={`${url}/productOrderIn`} component={ProductOrderIn} />
                                 <Route path={`${url}/orderIn`} component={OrderIn} />
                             </Switch>
+
+                            <RoamTaskWinBox roamTask={this.state.roamTask} changeRoamTask={this.changeRoamTask.bind(this)} />
                         </div>
                     </div>
                 </div>
@@ -98,3 +108,12 @@ export default class LoanBefore extends Component {
         )
     }
 }
+
+
+/*export default connect(
+    (state,ownProps) => ({
+        content: state.loanBefore,
+    }),{
+        fetchQueryNodeFromInfoAllByONid
+    }
+)(LoanBefore)*/

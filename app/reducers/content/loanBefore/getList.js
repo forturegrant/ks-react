@@ -9,7 +9,6 @@ export function getListAction(list) {
     }
 }
 
-
 export function getList(state = initialState, action) {
     switch (action.type) {
         case "GET_LIST":
