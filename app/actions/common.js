@@ -5,6 +5,7 @@ import {getListAction} from '../reducers/content/loanBefore/getList'
 import {getProductListAction} from '../reducers/content/loanBefore/getProductList'
 import {getCityAction} from '../reducers/content/loanBefore/orderIn'
 import {getAreaAction} from '../reducers/content/loanBefore/orderIn'
+import {openRoamTaskAction} from "../reducers/content/loanBefore/roamTask";
 
 export function fetchLogin(values) {
     return async function (dispatch) {
@@ -126,7 +127,19 @@ export function fetchQueryNodeFromInfoAllByONid(values) {
                 dispatch(fetchEnd())
             }
         } catch (e) {
-
+            console.log(e);
         }
+    }
+}
+
+export function openRoamTask() {
+    return function(dispatch){
+        dispatch(openRoamTaskAction())
+    }
+}
+
+export function closeRoamTask() {
+    return function(dispatch){
+        dispatch(closeRoamTaskAction())
     }
 }

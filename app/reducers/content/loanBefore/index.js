@@ -4,11 +4,13 @@ import {getProductList} from './getProductList.js'
 import {getCity} from './orderIn'
 import {getArea} from './orderIn'
 import {getNodeFromInfoAllByONid} from './getNodeFromInfoAllByONid'
+import {roamTask} from "./roamTask"
 
 export const LoanBefore = combineReducers({
     getList,
     getProductList,
     getCity,
     getArea,
-    getNodeFromInfoAllByONid
+    getNodeFromInfoAllByONid,
+    roamTask
 })
