@@ -6,6 +6,7 @@ import {getProductListAction} from '../reducers/content/loanBefore/getProductLis
 import {getCityAction} from '../reducers/content/loanBefore/orderIn'
 import {getAreaAction} from '../reducers/content/loanBefore/orderIn'
 import {openRoamTaskAction} from "../reducers/content/loanBefore/roamTask";
+import {closeRoamTaskAction} from "../reducers/content/loanBefore/roamTask";
 
 export function fetchLogin(values) {
     return async function (dispatch) {
@@ -120,6 +121,7 @@ export function fetchQueryNodeFromInfoAllByONid(values) {
             const response = await axiosInstance.post('manager/queryNodeFromInfoAllByONid.do', values)
             if (response.data.type === 1) {
                 dispatch(fetchEnd())
+                dispatch(openRoamTaskAction());
                 ///dispatch(getProductListAction(response.data.content.list))
                 //localStorage.setItem('token','1');
                 //history.push('/content/console');

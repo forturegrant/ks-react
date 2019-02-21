@@ -8,14 +8,15 @@ class roamTaskWinBox extends Component {
     }
 
     render() {
+        const {roamTask, closeRoamTask} = this.props;
         return (
-            <div className="winBox processForm_winBox" style={{display: this.props.roamTask ? 'block' : 'none'}}>
+            <div className="winBox processForm_winBox" style={{display: roamTask ? 'block' : 'none'}}>
                 <div className="winBox1">
                     <div className="winBox3">
                         <div className="dealrecord">
                             <div className="headerBox">
                                 <span className="headerSpan">角色审批</span>
-                                <i className="iconfont icon-wrong headerIcon" id="show"></i>
+                                <i className="iconfont icon-wrong headerIcon" id="show" onClick={() => closeRoamTask()}></i>
                             </div>
 
                             <div className="resultBox">
@@ -50,7 +51,6 @@ class roamTaskWinBox extends Component {
                                             {/*<tr className="chooseRole" style={{display: 'none'}}>*/}
                                             {/*<td>已选择：</td>*/}
                                             {/*<td className="tdWei selPers">*/}
-
                                             {/*</td>*/}
                                             {/*</tr>*/}
                                             {/*/!*{{else}}*!/*/}
@@ -93,9 +93,10 @@ class roamTaskWinBox extends Component {
 
 export default connect(
     (state, ownProps) => ({
-        roamTask: state.LoanBefore.roamTask,
+        roamTask: state.LoanBefore.roamTask.roamTask,
         content: state.LoanBefore.content
-    },{
+        //list: state.LoanBefore.getList.list,
+    }), {
         closeRoamTask
-    })
+    }
 )(roamTaskWinBox)

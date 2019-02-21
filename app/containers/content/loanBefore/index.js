@@ -16,14 +16,7 @@ export default class LoanBefore extends Component {
         super(props)
         this.state = {
             bgColor: 0,
-            roamTask: false
         }
-    }
-
-    changeRoamTask(){
-        this.setState({
-            roamTask: !this.state.roamTask
-        })
     }
 
     render() {
@@ -95,12 +88,12 @@ export default class LoanBefore extends Component {
                             </div>
                             {/*<!--滚动div   -->*/}
                             <Switch>
-                                <Route exact path={`${url}/`} render={props=><List {...props} changeRoamTask={this.changeRoamTask.bind(this)}/>}/>
+                                <Route exact path={`${url}/`} component={List}/>}/>
                                 <Route path={`${url}/productOrderIn`} component={ProductOrderIn} />
                                 <Route path={`${url}/orderIn`} component={OrderIn} />
                             </Switch>
 
-                            <RoamTaskWinBox roamTask={this.state.roamTask} changeRoamTask={this.changeRoamTask.bind(this)} />
+                            <RoamTaskWinBox />
                         </div>
                     </div>
                 </div>

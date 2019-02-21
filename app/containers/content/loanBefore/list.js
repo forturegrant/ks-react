@@ -8,7 +8,6 @@ import {
 import {fetchGetList} from "../../../actions/common";
 import {fetchQueryNodeFromInfoAllByONid} from "../../../actions/common";
 
-
 class List extends Component {
     constructor(props) {
         super(props)
@@ -22,20 +21,19 @@ class List extends Component {
 
     handleChange(e) {
         if (e.target.value === 'reviewOrder') {
-            this.props.changeRoamTask();
+            this.setState({
+                defaultValue: -1,
+                order_id: e.currentTarget.getAttribute('data-order_id'),
+                node_id: e.currentTarget.getAttribute('data-node_id'),
+                product_id: e.currentTarget.getAttribute('data-product_id')
+            }, () => {
+                this.props.fetchQueryNodeFromInfoAllByONid({
+                    order_id: this.state.order_id,
+                    node_id: this.state.node_id,
+                    product_id: this.state.product_id,
+                });
+            })
         }
-        this.setState({
-            defaultValue: -1,
-            order_id: e.currentTarget.getAttribute('data-order_id'),
-            node_id: e.currentTarget.getAttribute('data-node_id'),
-            product_id: e.currentTarget.getAttribute('data-product_id')
-        }, () => {
-            this.props.fetchQueryNodeFromInfoAllByONid({
-                order_id: this.state.order_id,
-                node_id: this.state.node_id,
-                product_id: this.state.product_id,
-            });
-        })
     }
 
     render() {
