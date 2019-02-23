@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67b779b3-2458-423e-8437-c7369cbe56d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/actions/common.js" afterPath="$PROJECT_DIR$/app/actions/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/content/loanBefore/common/roamTaskWinBox.js" afterPath="$PROJECT_DIR$/app/containers/content/loanBefore/common/roamTaskWinBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/content/loanBefore/index.js" afterPath="$PROJECT_DIR$/app/containers/content/loanBefore/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/content/loanBefore/list.js" afterPath="$PROJECT_DIR$/app/containers/content/loanBefore/list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.js" afterPath="$PROJECT_DIR$/app/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/reducers/content/loanBefore/roamTask.js" afterPath="$PROJECT_DIR$/app/reducers/content/loanBefore/roamTask.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/configureStore.js" afterPath="$PROJECT_DIR$/app/store/configureStore.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,10 +20,13 @@
       <file leaf-file-name="roamTaskWinBox.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/containers/content/loanBefore/common/roamTaskWinBox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="581">
+              <caret line="54" column="101" lean-forward="false" selection-start-line="54" selection-start-column="101" selection-end-line="54" selection-end-column="101" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+                <marker date="1550911228993" expanded="true" signature="4216:4577" ph="..." />
+                <marker date="1550911228993" expanded="true" signature="4410:4495" ph="..." />
+                <marker date="1550911228993" expanded="false" signature="4877:4890" ph="..." />
               </folding>
             </state>
           </provider>
@@ -51,8 +47,8 @@
       <file leaf-file-name="roamTask.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/reducers/content/loanBefore/roamTask.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="630">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -62,20 +58,8 @@
         <entry file="file://$PROJECT_DIR$/app/containers/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2610">
-              <caret line="97" column="22" lean-forward="true" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+              <caret line="97" column="22" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/reducers/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -84,21 +68,9 @@
         <entry file="file://$PROJECT_DIR$/app/store/configureStore.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,7 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ng-model</find>
       <find>bgSortTwo</find>
       <find>roamTask</find>
       <find>changeRoamTask</find>
@@ -145,6 +116,7 @@
       <find>store</find>
       <find>closeRoamTask</find>
       <find>show</find>
+      <find>attachment</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -198,7 +170,6 @@
         <option value="$PROJECT_DIR$/app/reducers/login/getCode.js" />
         <option value="$PROJECT_DIR$/app/containers/login/index.js" />
         <option value="$PROJECT_DIR$/app/containers/register/index.js" />
-        <option value="$PROJECT_DIR$/app/config.js" />
         <option value="$PROJECT_DIR$/app/style/skin.less" />
         <option value="$PROJECT_DIR$/app/containers/content/new-index.css" />
         <option value="$PROJECT_DIR$/app/containers/content/index.js" />
@@ -210,9 +181,10 @@
         <option value="$PROJECT_DIR$/app/containers/content/loanBefore/list.js" />
         <option value="$PROJECT_DIR$/app/containers/content/loanBefore/index.js" />
         <option value="$PROJECT_DIR$/app/actions/common.js" />
-        <option value="$PROJECT_DIR$/app/reducers/content/loanBefore/roamTask.js" />
         <option value="$PROJECT_DIR$/app/store/configureStore.js" />
         <option value="$PROJECT_DIR$/app/index.js" />
+        <option value="$PROJECT_DIR$/app/config.js" />
+        <option value="$PROJECT_DIR$/app/reducers/content/loanBefore/roamTask.js" />
         <option value="$PROJECT_DIR$/app/containers/content/loanBefore/common/roamTaskWinBox.js" />
       </list>
     </option>
@@ -299,6 +271,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -407,8 +381,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -422,7 +394,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/reducers/content/loanBefore/roamTask.js&#10;common&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/actions/common.js&#10;list.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/list.js&#10;roamtaskwinbox.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/common/roamTaskWinBox.js&#10;config.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/config.js&#10;common.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/actions/common.js&#10;skin.less&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/style/skin.less&#10;orderin.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/orderIn.js&#10;webpack.config.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/webpack.config.js&#10;orderIn.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/orderIn.js&#10;ajax.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/utils/ajax.js&#10;login.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/reducers/login/login.js&#10;productOrderIn&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/productOrderIn.js&#10;loanB&#9;null&#9;null&#10;loanBefore&#9;null&#9;null&#10;pack&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/package.json&#10;produc&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/productOrderIn.js&#10;package.json&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/package.json&#10;index.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/reducers/content/loanBefore/index.js&#10;COMMON.JS&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/actions/common.js&#10;configur&#9;FILE&#9;file://D:/project/ks-react/app/store/configureStore.js&#10;webpac&#9;FILE&#9;file://D:/project/ks-react/webpack.config.js" />
+    <property name="SearchEverywhereHistoryKey" value="config.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/config.js&#10;common&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/actions/common.js&#10;list.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/list.js&#10;roamtaskwinbox.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/common/roamTaskWinBox.js&#10;common.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/actions/common.js&#10;skin.less&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/style/skin.less&#10;orderin.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/orderIn.js&#10;webpack.config.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/webpack.config.js&#10;orderIn.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/orderIn.js&#10;ajax.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/utils/ajax.js&#10;login.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/reducers/login/login.js&#10;productOrderIn&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/productOrderIn.js&#10;loanB&#9;null&#9;null&#10;loanBefore&#9;null&#9;null&#10;pack&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/package.json&#10;produc&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/containers/content/loanBefore/productOrderIn.js&#10;package.json&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/package.json&#10;index.js&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/reducers/content/loanBefore/index.js&#10;COMMON.JS&#9;FILE&#9;file://C:/Users/Administrator/WebstormProjects/ks-react/app/actions/common.js&#10;configur&#9;FILE&#9;file://D:/project/ks-react/app/store/configureStore.js&#10;webpac&#9;FILE&#9;file://D:/project/ks-react/webpack.config.js" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
@@ -602,7 +574,9 @@
       <workItem from="1549937086559" duration="57501000" />
       <workItem from="1550451939260" duration="3797000" />
       <workItem from="1550558589407" duration="23058000" />
-      <workItem from="1550748924410" duration="6000" />
+      <workItem from="1550748924410" duration="37000" />
+      <workItem from="1550818224506" duration="10639000" />
+      <workItem from="1550915232602" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="ajskdf">
       <created>1539253450849</created>
@@ -730,11 +704,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550563209143</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="流转操作">
+      <created>1550748942409</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1550748942409</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390018000" />
+    <option name="totallyTimeSpent" value="400695000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -754,7 +735,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2890625" sideWeight="0.4946695" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33816963" sideWeight="0.49413645" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45089287" sideWeight="0.4824094" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22321428" sideWeight="0.4824094" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1057,13 +1038,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/containers/content/loanBefore/common/roamTask.js" />
-    <entry file="file://$PROJECT_DIR$/app/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="21" column="86" lean-forward="true" selection-start-line="21" selection-start-column="86" selection-end-line="21" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/containers/content/public-content.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="786">
@@ -1183,9 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="95" column="37" lean-forward="true" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1199,32 +1170,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="786">
+          <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="450">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/configureStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1232,7 +1200,22 @@
     <entry file="file://$PROJECT_DIR$/app/containers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2610">
-          <caret line="97" column="22" lean-forward="true" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+          <caret line="97" column="22" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/reducers/content/loanBefore/roamTask.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1247,20 +1230,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/reducers/content/loanBefore/roamTask.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/containers/content/loanBefore/common/roamTaskWinBox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="581">
+          <caret line="54" column="101" lean-forward="false" selection-start-line="54" selection-start-column="101" selection-end-line="54" selection-end-column="101" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+            <marker date="1550911228993" expanded="true" signature="4216:4577" ph="..." />
+            <marker date="1550911228993" expanded="true" signature="4410:4495" ph="..." />
+            <marker date="1550911228993" expanded="false" signature="4877:4890" ph="..." />
           </folding>
         </state>
       </provider>

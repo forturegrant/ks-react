@@ -9,6 +9,7 @@ class roamTaskWinBox extends Component {
 
     render() {
         const {roamTask, closeRoamTask} = this.props;
+        const {attTypeInfos ,feeInfos,orderInfos,productInfos} = this.props.content
         return (
             <div className="winBox processForm_winBox" style={{display: roamTask ? 'block' : 'none'}}>
                 <div className="winBox1">
@@ -32,6 +33,46 @@ class roamTaskWinBox extends Component {
                                                     <label><input type="radio" name="faceResult" value="2"/>拒绝审核</label>
                                                 </td>
                                             </tr>
+                                            <table class="resultTab attachment" style="margin-top: 20px">
+                                                <tbody>
+                                                {attTypeInfos.map((item,index) =>(
+                                                    <tr class="">
+                                                        <td class="">{item.type_name}</td>
+                                                        <td class="unload">
+                                                            <div class="_result">
+                                                                <label><input type="radio" {item.attachType=== 1? checked: ''}
+                                                                              value="1" />正常</label>
+                                                                <label><input type="radio" {item.attachType=== 2? checked: ''}
+                                                                              value="2" />异常</label>
+                                                            </div>
+                                                            <em id="imgTerm_0" class="viewPic" data-id={item.attchment_type_id}
+                                                                data-attachname={item.type_name}>上传图片</em>
+                                                            <div class="imgArr minImg">
+                                                                <span style={{display: 'none'}} class="_pre " ></span>
+                                                                <div class="cover" style="overflow-y: hidden; height: 70px; margin: 0 24px;">
+                                                                    <div id={`gallery${item.attchment_type_id}`} attachId={item.attchment_type_id}
+                                                                         attachname={item.type_name}
+                                                                         style="position: relative; left: 0;">
+                                                                        {item.real_data.map(()=>(
+                                                                            <li href="{{this}}"><img class="img_00" url="{{this}}" src="{{this}}/tupian_compress">
+                                                                                <i class="delSingleAttach iconfont icon-minus">
+                                                                                </i>
+                                                                            </li>
+                                                                        )}
+                                                                    </div>
+                                                                </div>
+                                                                <span style="display: none" class="_next " ng-if="item.isImg" ng-click="_next(key)"></span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    )
+                                                )}
+
+                                                {{/each}}
+                                                </tbody>
+                                            </table>
+                                            {{/if}}
                                             {/*/!*{{#if admins.[0]}}*!/*/}
                                             {/*<tr className="role">*/}
                                             {/*<td><span style={{color: '#D5332C'}}>*</span>请选对象</td>*/}
@@ -92,11 +133,14 @@ class roamTaskWinBox extends Component {
 }
 
 export default connect(
-    (state, ownProps) => ({
-        roamTask: state.LoanBefore.roamTask.roamTask,
-        content: state.LoanBefore.content
-        //list: state.LoanBefore.getList.list,
-    }), {
+    (state, ownProps) => {
+       const {roamTask} = state.LoanBefore.roamTask;
+       const {content} = state.LoanBefore;
+       return {
+           roamTask,
+           content
+       }
+    }, {
         closeRoamTask
     }
 )(roamTaskWinBox)
