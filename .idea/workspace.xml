@@ -4,16 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/app/containers/login/index.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67b779b3-2458-423e-8437-c7369cbe56d1" name="Default" comment="数据拼接">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/reducers/content/loanBefore/getNodeFromInfoAllByONid" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/reducers/content/loanBefore/roamTask.js" />
+    <list default="true" id="67b779b3-2458-423e-8437-c7369cbe56d1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/actions/common.js" afterPath="$PROJECT_DIR$/app/actions/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config.js" afterPath="$PROJECT_DIR$/app/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/content/loanBefore/index.js" afterPath="$PROJECT_DIR$/app/containers/content/loanBefore/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/content/loanBefore/list.js" afterPath="$PROJECT_DIR$/app/containers/content/loanBefore/list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/login/index.js" afterPath="$PROJECT_DIR$/app/containers/login/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/reducers/content/loanBefore/index.js" afterPath="$PROJECT_DIR$/app/reducers/content/loanBefore/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -508,7 +500,7 @@
       <workItem from="1549788159267" duration="592000" />
       <workItem from="1549863069935" duration="8213000" />
       <workItem from="1550302231985" duration="6343000" />
-      <workItem from="1550989401513" duration="57000" />
+      <workItem from="1550989401513" duration="145000" />
     </task>
     <task id="LOCAL-00001" summary="ajskdf">
       <created>1539253450849</created>
@@ -608,11 +600,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541751745809</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="日常提交">
+      <created>1550989501699</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1550989501700</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277146000" />
+    <option name="totallyTimeSpent" value="277234000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -744,7 +743,8 @@
     <MESSAGE value="订单录入" />
     <MESSAGE value="ajskdf" />
     <MESSAGE value="数据拼接" />
-    <option name="LAST_COMMIT_MESSAGE" value="数据拼接" />
+    <MESSAGE value="日常提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="日常提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -857,6 +857,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -865,6 +866,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -895,6 +897,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4756">
           <caret line="164" column="38" lean-forward="false" selection-start-line="164" selection-start-column="38" selection-end-line="164" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -980,6 +983,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1508">
           <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -994,6 +1000,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="23" lean-forward="true" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,6 +1015,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1276">
           <caret line="104" column="21" lean-forward="true" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1015,6 +1025,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-467">
           <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,6 +1053,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,6 +1061,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3">
           <caret line="87" column="9" lean-forward="false" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,6 +1081,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,6 +1091,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1080,6 +1099,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="8" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
