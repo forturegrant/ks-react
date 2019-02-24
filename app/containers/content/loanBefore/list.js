@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import { Tabs } from 'antd';
+import {Tabs} from 'antd';
 import {
     Link
 } from 'react-router-dom'
-import RoamTaskWinBox from './common/roamTaskWinBox'
 
 import {fetchGetList} from "../../../actions/common";
+import {fetchQueryNodeFromInfoAllByONid} from "../../../actions/common";
 
 
 class List extends Component {
@@ -14,24 +14,33 @@ class List extends Component {
         super(props)
         //this.changeBgColor = this.changeBgColor.bind(this);
         this.state = {
-            roamTask: false
+            order_id :'',
+            node_id: '',
+            product_id: ''
         }
     }
 
-    handleChange(e){
-        if(e.target.value === 'reviewOrder'){
+    handleChange(e) {
+        if (e.target.value === 'reviewOrder') {
             this.setState({
-                roamTask: true
+                order_id :e.target.getAttribute('data-order_id'),
+                node_id :e.target.getAttribute('data-node_id'),
+                product_id :e.target.getAttribute('data-product_id'),
+            }, () => {
+                this.props.fetchQueryNodeFromInfoAllByONid({
+                    order_id: this.state.order_id,
+                    node_id: this.state.node_id,
+                    product_id: this.state.product_id,
+                })
             })
         }
     }
 
-    render(){
+    render() {
         const {list} = this.props;
         const {url} = this.props.match;
-        return(
-            <div>
-                <div className="bgSortScroll">
+        return (
+            <div className="bgSortScroll">
                 {/*<!-- ngIf: HbHr.hr54 -->*/}
                 <div className="public-bgContent">
                     {/*<!--表单搜索-->*/}
@@ -43,7 +52,7 @@ class List extends Component {
                             className="iconfont icon-riqi"></i></span>
                         <div className="se-re">
                             <select id="seleNames" defaultValue={-1}>
-                                <option value="-1" >选择字段</option>
+                                <option value="-1">选择字段</option>
                                 <option value="1">借款编号</option>
                                 <option value={2}>客户姓名</option>
                                 <option value="5">手机号码</option>
@@ -128,7 +137,7 @@ class List extends Component {
                                 {list.map((item, index) => (
                                     <tr className="table-tr-hover" key={index}>
                                         <td>
-                                            <input type="checkbox" name="ch_id" value={item.id} />
+                                            <input type="checkbox" name="ch_id" value={item.id}/>
                                         </td>
                                         <td>{item.found_time}</td>
                                         <td>{/*{{#IF_GT before_s_id node_id}}<span style="background: #e55a5b; padding: 3px 15px; color: #fff;">{{loan_number}}</span>{{else}}{{loan_number}}{{/IF_GT}}*/}</td>
@@ -138,15 +147,19 @@ class List extends Component {
                                         <td>{item.apply_money}</td>
                                         <td>{item.user_name}</td>
                                         <td>
-                                            {item.d_name3 ? `<span></span>${item.d_name3}`: ''}
-                                            {item.d_name2 ? item.d_name2: ''}
-                                            {item.d_name ? item.d_name: ''}
+                                            {item.d_name3 ? `<span></span>${item.d_name3}` : ''}
+                                            {item.d_name2 ? item.d_name2 : ''}
+                                            {item.d_name ? item.d_name : ''}
                                         </td>
                                         <td>{item.s_name}</td>
                                         <td>
                                             <div className="se-re sel-blue">
                                                 <select
-                                                    className="tabHint" onChange={this.handleChange.bind(this)} defaultValue="-1">
+                                                    className="tabHint" onChange={this.handleChange.bind(this)}
+                                                    data-order_id={id}
+                                                    data-node_id ={node_id}
+                                                    data-product_id = {product_id}
+                                                    defaultValue="-1">
                                                     <option value="-1">选择操作</option>
                                                     <option value="reviewOrder">马上流转</option>
                                                 </select>
@@ -186,24 +199,21 @@ class List extends Component {
                         </div>
                     </div>
                 </div>
-
             </div>
-                <RoamTaskWinBox roamTask={this.state.roamTask} />
-            </div>
-    )
+        )
     }
 
     componentDidMount() {
-        this.props.dispatch(fetchGetList({
+        this.props.fetchGetList({
             roleId: 21,
             audit_status: '',
             pageNum: 1,
             susp_status: 1
-        }));
+        });
     }
 }
 
-
+/*
 const mapStateToProps = (state) => ({
     //isFetching: state.globalState.isFetching
     list: state.LoanBefore.getList.list
@@ -216,5 +226,17 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
+)(List)
+*/
+
+
+export default connect(
+    (state, ownProps) => ({
+        list: state.LoanBefore.getList.list,
+        content: state.LoanBefore.content,
+    }), {
+        fetchGetList,
+        fetchQueryNodeFromInfoAllByONid
+    }
 )(List)
 

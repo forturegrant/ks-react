@@ -111,3 +111,25 @@ export function fetchSaveOrder(values) {
         }
     }
 }
+
+export function fetchQueryNodeFromInfoAllByONid(values) {
+    return async function (dispatch) {
+        try {
+            dispatch(fetchStart())
+            const response = await axiosInstance.post('manager/queryNodeFromInfoAllByONid.do', values)
+            if (response.data.type === 1) {
+                dispatch(fetchEnd())
+                dispatch()
+                ///dispatch(getProductListAction(response.data.content.list))
+                //localStorage.setItem('token','1');
+                //history.push('/content/console');
+            } else if (response.data.type === -1) {
+                dispatch(fetchEnd())
+            }
+        } catch (e) {
+
+        }
+    }
+}
+
+

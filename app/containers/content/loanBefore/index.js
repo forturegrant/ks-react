@@ -8,6 +8,7 @@ import {
 import List from './list'
 import ProductOrderIn from './productOrderIn'
 import OrderIn from './orderIn.js'
+import RoamTaskWinBox from './common/roamTaskWinBox'
 
 export default class LoanBefore extends Component {
     constructor(props) {
@@ -15,7 +16,6 @@ export default class LoanBefore extends Component {
         this.state = {
             bgColor: 0
         }
-        //this.changeBgColor = this.changeBgColor.bind(this);
     }
 
     render() {
@@ -87,10 +87,12 @@ export default class LoanBefore extends Component {
                             </div>
                             {/*<!--滚动div   -->*/}
                             <Switch>
-                                <Route exact path={`${url}/`} component={List} />
+                                <Route exact path={`${url}/`} render={props=><List {...props}/>}/>
                                 <Route path={`${url}/productOrderIn`} component={ProductOrderIn} />
                                 <Route path={`${url}/orderIn`} component={OrderIn} />
                             </Switch>
+
+                            <RoamTaskWinBox />
                         </div>
                     </div>
                 </div>

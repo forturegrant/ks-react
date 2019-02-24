@@ -2,7 +2,7 @@ export default (() => {
     window.gconfig = {};
     +(function (global) {
         // 本地开发打开的路径以及端口
-        global.linkUrl = window.location.protocol + "//" + '192.168.1.151:8080' + "/ks_manager/";
+        global.linkUrl = window.location.protocol + "//" + 'localhost:8080' + "/ks_manager/";
         ;
         if (process.env.NODE_ENV === 'production') { // 生产环境用不同的接口地址
             global.linkUrl = 'http://localhost:3000';
