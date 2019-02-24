@@ -43,7 +43,7 @@ export default class Content extends Component {
         const {url} = this.props.match;
         return (
             <div>
-                <div className="" style={{overflow:'hidden'}}>
+                <div className="" style={{overflow: 'hidden'}}>
                     {/*<!--此处作为更新视图容器-->*/}
                     <div className="nav-bg">
                         <div className="nav-left floatLeft">
@@ -56,11 +56,12 @@ export default class Content extends Component {
                             <ul id="nav-parent">
                                 {
                                     menu.map((item, index) =>
-                                        (<li key={index} /*className={`index ${this.state.bgColor === index ? "actives" : ""}`}*/
-                                             onClick={this.changeBgColor.bind(this, index)}>
-                                            <NavLink className="js-menu-item" activeClassName="actives"
-                                                  to={`${url}/${item.menuUrl}`} replace>{item.menuName}</NavLink>
-                                        </li>)
+                                        (
+                                            <li key={index} /*className={`index ${this.state.bgColor === index ? "actives" : ""}`}*/
+                                                onClick={this.changeBgColor.bind(this, index)}>
+                                                <NavLink className="js-menu-item" activeClassName="actives"
+                                                         to={`${url}/${item.menuUrl}`} replace>{item.menuName}</NavLink>
+                                            </li>)
                                     )
                                 }
                             </ul>

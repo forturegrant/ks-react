@@ -3,8 +3,8 @@ import {getList} from './getList'
 import {getProductList} from './getProductList.js'
 import {getCity} from './orderIn'
 import {getArea} from './orderIn'
-import {getNodeFromInfoAllByONid} from "./getNodeFromInfoAllByONid";
-import {roamTask} from "./roamTask";
+import {getNodeFromInfoAllByONid} from './getNodeFromInfoAllByONid'
+import {roamTask} from "./roamTask"
 
 export const LoanBefore = combineReducers({
     getList,

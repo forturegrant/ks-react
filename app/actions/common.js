@@ -5,6 +5,8 @@ import {getListAction} from '../reducers/content/loanBefore/getList'
 import {getProductListAction} from '../reducers/content/loanBefore/getProductList'
 import {getCityAction} from '../reducers/content/loanBefore/orderIn'
 import {getAreaAction} from '../reducers/content/loanBefore/orderIn'
+import {openRoamTaskAction} from "../reducers/content/loanBefore/roamTask";
+import {closeRoamTaskAction} from "../reducers/content/loanBefore/roamTask";
 
 export function fetchLogin(values) {
     return async function (dispatch) {
@@ -119,7 +121,7 @@ export function fetchQueryNodeFromInfoAllByONid(values) {
             const response = await axiosInstance.post('manager/queryNodeFromInfoAllByONid.do', values)
             if (response.data.type === 1) {
                 dispatch(fetchEnd())
-                dispatch()
+                dispatch(openRoamTaskAction());
                 ///dispatch(getProductListAction(response.data.content.list))
                 //localStorage.setItem('token','1');
                 //history.push('/content/console');
@@ -127,9 +129,19 @@ export function fetchQueryNodeFromInfoAllByONid(values) {
                 dispatch(fetchEnd())
             }
         } catch (e) {
-
+            console.log(e);
         }
     }
 }
 
+export function openRoamTask() {
+    return function(dispatch){
+        dispatch(openRoamTaskAction())
+    }
+}
 
+export function closeRoamTask() {
+    return function(dispatch){
+        dispatch(closeRoamTaskAction())
+    }
+}

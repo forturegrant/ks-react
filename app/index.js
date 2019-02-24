@@ -6,7 +6,6 @@ import {store} from './store/configureStore'
 import history from './history.js'
 import App from './containers/index'
 
-
 render(
     <Provider store={store}>
         <Router history={history}>
