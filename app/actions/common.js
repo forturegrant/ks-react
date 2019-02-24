@@ -5,6 +5,7 @@ import {getListAction} from '../reducers/content/loanBefore/getList'
 import {getProductListAction} from '../reducers/content/loanBefore/getProductList'
 import {getCityAction} from '../reducers/content/loanBefore/orderIn'
 import {getAreaAction} from '../reducers/content/loanBefore/orderIn'
+import {getNodeFromInfoAllByONidAction} from "../reducers/content/loanBefore/getNodeFromInfoAllByONid";
 import {openRoamTaskAction} from "../reducers/content/loanBefore/roamTask";
 import {closeRoamTaskAction} from "../reducers/content/loanBefore/roamTask";
 
@@ -122,6 +123,7 @@ export function fetchQueryNodeFromInfoAllByONid(values) {
             if (response.data.type === 1) {
                 dispatch(fetchEnd())
                 dispatch(openRoamTaskAction());
+                dispatch(getNodeFromInfoAllByONidAction(response.data.content))
                 ///dispatch(getProductListAction(response.data.content.list))
                 //localStorage.setItem('token','1');
                 //history.push('/content/console');

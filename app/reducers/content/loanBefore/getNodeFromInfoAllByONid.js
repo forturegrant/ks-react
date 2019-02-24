@@ -2,7 +2,7 @@ const initialState = {
     content: {}
 }
 
-export function getNodeFromInfoAllByONidAction() {
+export function getNodeFromInfoAllByONidAction(content) {
     return {
         type: 'GET_NODEFROM',
         content
