@@ -8,6 +8,7 @@ import {getAreaAction} from '../reducers/content/loanBefore/orderIn'
 import {getNodeFromInfoAllByONidAction} from "../reducers/content/loanBefore/getNodeFromInfoAllByONid";
 import {openRoamTaskAction} from "../reducers/content/loanBefore/roamTask";
 import {closeRoamTaskAction} from "../reducers/content/loanBefore/roamTask";
+import {ajax} from "../utils/index";
 
 export function fetchLogin(values) {
     return async function (dispatch) {
@@ -135,6 +136,53 @@ export function fetchQueryNodeFromInfoAllByONid(values) {
         }
     }
 }
+
+/*async function request(url, item){
+    const response = await axiosInstance.post(url, item);
+    if (response.ok) {
+        const responseBody = response.json();
+        if (responseBody.type === -1) {
+            throw new Error(responseBody.msg);
+        } else {
+            return responseBody;
+        }
+    }
+}*/
+
+export function fetchRoamTask(attTypeInfos,values) {
+    return async function (dispatch) {
+        try {
+            dispatch(fetchStart());
+            let ajaxArray = attTypeInfos.map((item,index) => axiosInstance.post('manager/insertAttachment.do', item))
+            const response = await Promise.all(ajaxArray);
+            console.log(response);
+            let if_success = true;
+            response.forEach((item) => {
+                if(item.data.type === -1){
+                    if_success = false;
+                }
+            })
+            if(if_success){
+                const response = await axiosInstance.post('manager/roamTask.do', values)
+                if (response.data.type === 1) {
+                    dispatch(fetchEnd())
+                    dispatch(openRoamTaskAction());
+                    dispatch(getNodeFromInfoAllByONidAction(response.data.content))
+                    ///dispatch(getProductListAction(response.data.content.list))
+                    //localStorage.setItem('token','1');
+                    //history.push('/content/console');
+                } else if (response.data.type === -1) {
+                    dispatch(fetchEnd())
+                }
+            }else{
+                dispatch(fetchEnd());
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }
+}
+
 
 export function openRoamTask() {
     return function(dispatch){

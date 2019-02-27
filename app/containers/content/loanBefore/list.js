@@ -13,24 +13,18 @@ class List extends Component {
         super(props)
         this.state = {
             defaultValue: -1,
-            id: '',
-            node_id: '',
-            product_id: ''
         }
     }
 
-    handleChange(e) {
+    handleChange(order_id, node_id, product_id, e) {
         if (e.target.value === 'reviewOrder') {
             this.setState({
-                defaultValue: -1,
-                order_id: e.currentTarget.getAttribute('data-order_id'),
-                node_id: e.currentTarget.getAttribute('data-node_id'),
-                product_id: e.currentTarget.getAttribute('data-product_id')
+                defaultValue: -1
             }, () => {
                 this.props.fetchQueryNodeFromInfoAllByONid({
-                    order_id: this.state.order_id,
-                    node_id: this.state.node_id,
-                    product_id: this.state.product_id,
+                    order_id: order_id,
+                    node_id: node_id,
+                    product_id: product_id,
                 });
             })
         }
@@ -157,10 +151,8 @@ class List extends Component {
                                                 <div className="se-re sel-blue">
                                                     <select
                                                         className="tabHint"
-                                                        data-node_id={item.node_id}
-                                                        data-order_id={item.id}
-                                                        data-product_id={item.product_id}
-                                                        onChange={this.handleChange.bind(this)} defaultValue={-1}
+                                                        onChange={this.handleChange.bind(this, item.id, item.node_id, item.product_id)}
+                                                        defaultValue={-1}
                                                         value={this.state.defaultValue}>
                                                         <option value="-1">选择操作</option>
                                                         <option value="reviewOrder">马上流转</option>
@@ -240,4 +232,3 @@ export default connect(
         fetchQueryNodeFromInfoAllByONid
     }
 )(List)
-
