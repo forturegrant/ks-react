@@ -149,20 +149,37 @@ export function fetchQueryNodeFromInfoAllByONid(values) {
     }
 }*/
 
-export function fetchRoamTask(attTypeInfos,values) {
+
+const request = async (url, item, ...args) => {
+    const data = {
+        attachImg: JSON.stringify(item.url),
+        attachName: '1',
+        attachId: '1',
+        ...args,
+        order_num: '1',
+        s_id: '1'
+    }
+    const response = await axiosInstance.post(url, data);
+    if (response.data.type === -1) {
+        throw new Error('请求失败');
+    } else if (response.data.type === 1) {
+        return response;
+    }
+}
+
+export function fetchRoamTask(attTypeInfos, oid, productId, nodeId) {
     return async function (dispatch) {
         try {
             dispatch(fetchStart());
-            let ajaxArray = attTypeInfos.map((item,index) => axiosInstance.post('manager/insertAttachment.do', item))
+            let ajaxArray = attTypeInfos.map((item, index) => request('manager/insertAttachment.do', item, oid, productId, nodeId));
             const response = await Promise.all(ajaxArray);
-            console.log(response);
             let if_success = true;
             response.forEach((item) => {
-                if(item.data.type === -1){
+                if (item.data.type === -1) {
                     if_success = false;
                 }
             })
-            if(if_success){
+            /*if (if_success) {
                 const response = await axiosInstance.post('manager/roamTask.do', values)
                 if (response.data.type === 1) {
                     dispatch(fetchEnd())
@@ -174,9 +191,9 @@ export function fetchRoamTask(attTypeInfos,values) {
                 } else if (response.data.type === -1) {
                     dispatch(fetchEnd())
                 }
-            }else{
+            } else {
                 dispatch(fetchEnd());
-            }
+            }*/
         } catch (e) {
             console.log(e);
         }
@@ -185,13 +202,13 @@ export function fetchRoamTask(attTypeInfos,values) {
 
 
 export function openRoamTask() {
-    return function(dispatch){
+    return function (dispatch) {
         dispatch(openRoamTaskAction())
     }
 }
 
 export function closeRoamTask() {
-    return function(dispatch){
+    return function (dispatch) {
         dispatch(closeRoamTaskAction())
     }
 }

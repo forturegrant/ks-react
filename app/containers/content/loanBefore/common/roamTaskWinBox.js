@@ -9,7 +9,7 @@ class roamTaskWinBox extends Component {
     }
 
     render() {
-        const {roamTask, closeRoamTask} = this.props;
+        const {roamTask, closeRoamTask, order_id, product_id, node_id} = this.props;
         const {attTypeInfos, feeInfos, orderInfos, productInfos} = this.props.content
         return (
             <div className="winBox processForm_winBox" style={{display: roamTask ? 'block' : 'none'}}>
@@ -87,7 +87,7 @@ class roamTaskWinBox extends Component {
                                             <textarea className="approveRemark"></textarea>
                                             <div className="deleBtn">
                                                 <button style={{background: '#E55A5B'}}
-                                                        onClick={() => this.props.fetchRoamTask(attTypeInfos,{test:1})}>确定提交
+                                                        onClick={() => this.props.fetchRoamTask(attTypeInfos)}>确定提交
                                                 </button>
                                             </div>
                                         </div>

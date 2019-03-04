@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Tabs} from 'antd';
 import {
     Link
 } from 'react-router-dom'
@@ -13,6 +12,9 @@ class List extends Component {
         super(props)
         this.state = {
             defaultValue: -1,
+            order_id: 0,
+            product_id: 0,
+            node_id: 0
         }
     }
 
